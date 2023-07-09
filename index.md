@@ -16,9 +16,11 @@ Also, feel free to explore some pictures below:
 ______________________________________________________________________________________________________
 
 ![city](/assets/IMG_2482.jpeg){: width="auto" height="auto" }
+
 <small> "Clouds"</small>
 
 ![bison](/assets/IMG_2609.jpeg){: width="auto" height="auto" }
+
 <small> "Long live bison"</small>
 
 ![gunung](/assets/IMG_5449.jpeg){: width="auto" height="auto" }
