@@ -5,6 +5,12 @@ categories: tutorials
 featured: False 
 ---
 
+
+______________________________________________________________________________________________________
+
+
+### <span style="color: red; font-weight: bold;">Quick access links</span>
+
 These are the steps I took to get started making a free website.  
 
 requirements:
