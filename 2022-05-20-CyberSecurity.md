@@ -10,9 +10,9 @@ ________________________________________________________________________________
 
 ### <span style="color: orange; font-weight: bold;">Understanding Risk! </span>
 
-Take time to understand what valuable data you hold and whos data you are protecting (yourself, your family, your kids)
+Take time to understand what valuable data you hold and whos data you are protecting (yourself, your family, your company)
  
-This can be your full name, your address, where you live, Emails, phone numbers etc. 
+This can be your full name, your address, where you live, where you work, Emails, phone numbers etc. 
  
 - Why do I need to protect this data? 
 
