@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2. CyberSecurity Resources"
+title: "2. CyberSecurity Resources (in progress 7/24)"
 categories: post
 featured: False 
 ---
