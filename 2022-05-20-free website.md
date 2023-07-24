@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to start a free website"
+title: "5. Free website with GitHub Pages"
 categories: tutorials
 featured: False 
 ---

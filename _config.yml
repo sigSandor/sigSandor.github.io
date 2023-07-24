@@ -1,11 +1,12 @@
-title: Carbon Site
+title: Carbon Site 
+
 description: A hastily made website!
 theme: just-the-docs
 
 url: https://sigSandor.github.io
 
 aux_links:
-  linkedin: https://www.linkedin.com/in/alex-barkman-b7b26a186/
-  github: https://github.com/sigSandor
+  Linkedin: https://www.linkedin.com/in/alex-barkman-b7b26a186/
+  Github: https://github.com/sigSandor
 
 color_scheme: dark

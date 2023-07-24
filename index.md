@@ -1,11 +1,12 @@
 ---
-title: "Home"
+title: "1. Home"
 layout: home
 ---
 
+
+### <span style="color: red; font-weight: bold; font-size: 36px;">Home</span>
 ______________________________________________________________________________________________________
 
-### <span style="color: red; font-weight: bold;">Home page:</span>
 
 I've been building this website from the really simple theme I found in GitHub.
 
