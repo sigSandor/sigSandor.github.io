@@ -8,12 +8,19 @@ layout: home
 ______________________________________________________________________________________________________
 
 
-I've been building this website from the really simple theme I found in GitHub.
+I've been building this website from a theme called "just the docs" from GitHub.
 
-This project helped me learn Ruby, Git, html and css while building this site.
+This project helped me learn a little bit of Ruby, Git, html and css while building this site.
+
+I try to update the website as much as possible, so please excuse the ongoing process. 
 
 
-Also, feel free to explore some pictures below:
+
+
+
+
+
+Also, feel free to explore some pictures that I like below:
 
 ______________________________________________________________________________________________________
 
