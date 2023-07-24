@@ -84,7 +84,7 @@ Set the remote URL for your repository using the following command:
 
     git remote set-url origin https://username:<PAT>@github.com/username/username.github.io.git
 
-Replace username with your GitHub username and <PAT> with the generated Personal Access Token.
+Replace username with your GitHub username and PAT with the generated Personal Access Token.
 
 Commit your changes and push them to GitHub:
 

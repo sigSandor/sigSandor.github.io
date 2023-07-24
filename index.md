@@ -5,7 +5,7 @@ layout: home
 
 ______________________________________________________________________________________________________
 
-### <span style="color: red; font-weight: bold;">Quick access links</span>
+### <span style="color: red; font-weight: bold;">Home page:</span>
 
 I've been building this website from the really simple theme I found in GitHub.
 
