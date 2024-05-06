@@ -1,4 +1,4 @@
-title: Carbon Site 
+title: SigSite 
 description: 
 theme: just-the-docs
 
@@ -10,7 +10,7 @@ aux_links:
 
 #Color scheme and logo
 color_scheme: dark
-logo: "/assets/logo.png"
+#logo: "/assets/logo.png"
 favicon_ico: "/assets/favicon.ico"
 
 #SEARCH PARAMATERS
