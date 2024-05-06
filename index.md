@@ -5,9 +5,13 @@ layout: home
 
 
 ### <span style="color: red; font-weight: bold; font-size: 36px;">Home</span>
+
+
 ______________________________________________________________________________________________________
 
-This is an ongoing project for me, to enjoy learning Ruby, store documentation, and provide quick public access to hyperlinks.
+
+This is an ongoing project, I've been enjoying learning Ruby, storing documentation, and it provides quick public access to hyperlinks.
+
 ______________________________________________________________________________________________________
 
 ![city](/assets/IMG_2482.jpeg){: width="auto" height="auto" }
