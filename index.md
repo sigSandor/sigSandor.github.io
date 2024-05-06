@@ -1,5 +1,5 @@
 ---
-title: "1. Home"
+title: "Home"
 layout: home
 ---
 
@@ -7,21 +7,7 @@ layout: home
 ### <span style="color: red; font-weight: bold; font-size: 36px;">Home</span>
 ______________________________________________________________________________________________________
 
-
-I've been building this website from a theme called "just the docs" from GitHub.
-
-This project helped me learn a little bit of Ruby, Git, html and css while building this site.
-
-I try to update the website as much as possible, so please excuse the ongoing process. 
-
-
-
-
-
-
-
-Also, feel free to explore some pictures that I like below:
-
+This is an ongoing project for me, to enjoy learning Ruby, store documentation, and provide quick public access to hyperlinks.
 ______________________________________________________________________________________________________
 
 ![city](/assets/IMG_2482.jpeg){: width="auto" height="auto" }
