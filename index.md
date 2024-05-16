@@ -5,7 +5,7 @@ nav_enabled: true
 collections:
   # Define a collection named "tests", its documents reside in the "_tests" directory
   tests:
-    permalink: "/:collection/:path/"
+    permalink: "/:collection/:Security/"
     output: true
 
 just_the_docs:
