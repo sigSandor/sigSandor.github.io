@@ -11,6 +11,7 @@ aux_links:
 #Color scheme and logo
 color_scheme: dark
 #logo: "/assets/logo.png"
+
 favicon_ico: "/assets/favicon.ico"
 
 #SEARCH PARAMATERS

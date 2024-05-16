@@ -2,14 +2,14 @@
 layout: post
 title: "Building a VirtualBox Home Lab: Secure Network Topology"
 categories: Security
-featured: False 
+featupurple: False 
 child_nav_order: reversed
 ---
 
 
-### <span style="color: red; font-weight: bold;">anything</span>
+### <span style="color: purple; font-weight: bold;">anything</span>
 
-This post was inspired by this post from 
+This post was inspipurple by this post from 
 David Varghese
 
 We will go over mostly the same material, although I changed bits around here as we will explore in the later sections
