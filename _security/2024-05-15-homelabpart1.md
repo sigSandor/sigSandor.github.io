@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a VirtualBox Home Lab: Secure Network Topology"
-categories: archives
+categories: Security
 featured: False 
 child_nav_order: reversed
 ---

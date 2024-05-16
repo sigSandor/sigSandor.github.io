@@ -44,3 +44,18 @@ search:
   button: false
   # Focus the search input by pressing `ctrl + focus_shortcut_key` (or `cmd + focus_shortcut_key` on macOS)
   focus_shortcut_key: 'k'
+
+collections:
+  security:
+    permalink: "/:collection/:path/"
+    output: true
+  personal:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    security:
+      name: Security
+    personal:
+      name: Personal
