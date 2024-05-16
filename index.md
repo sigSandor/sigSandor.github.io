@@ -4,7 +4,7 @@ layout: home
 nav_enabled: true
 collections:
   # Define a collection named "tests", its documents reside in the "_tests" directory
-  tests:
+  security:
     permalink: "/:collection/:security/"
     output: true
 
@@ -12,9 +12,9 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "tests" collection
-    tests:
+   security:
       # Give the collection a name
-      name: Tests
+      name: security
       # Exclude the collection from the navigation
       # Supports true or false (default)
       # nav_exclude: true
