@@ -3,7 +3,8 @@ layout: post
 title: "Building a VirtualBox Home Lab: Secure Network Topology"
 categories: Security
 featupurple: False 
-child_nav_order: reversed
+has_children: true
+
 ---
 
 
