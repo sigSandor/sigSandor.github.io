@@ -9,7 +9,7 @@ child_nav_order: reversed
 
 ### <span style="color: purple; font-weight: bold;">anything</span>
 
-This post was inspipurple by this post from 
+This post was inspired by this blog by 
 David Varghese
 
 We will go over mostly the same material, although I changed bits around here as we will explore in the later sections
