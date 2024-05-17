@@ -23,3 +23,13 @@ We will go over mostly the same material, although I changed bits around here as
 - Malware Analysis Lab (Windows & Linux)
 - Kali & Parrot linux
 
+Downloading pfSense
+
+Go to the following link: Download pfSense Community Edition
+As of writing the latest version of pfSense is 2.7.2.
+
+Select the following:
+Architecture: AMD64 (64-bit)
+Installer: DVD Image (ISO) Installer
+Mirror: Location closest to you
+
