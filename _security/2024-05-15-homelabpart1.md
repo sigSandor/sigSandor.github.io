@@ -2,9 +2,8 @@
 layout: post
 title: "Building a VirtualBox Home Lab: Secure Network Topology"
 categories: Security
-featupurple: False 
+featupurple: True
 has_children: true
-
 ---
 
 
@@ -13,7 +12,9 @@ has_children: true
 This post was inspired by this blog by 
 David Varghese
 
-We will go over mostly the same material, although I changed bits around here as we will explore in the later sections
+We will go over mostly the same material, although I changed many bits around here as we will explore in the later sections.
+
+
 
 ### Item Overview
 
