@@ -2,7 +2,6 @@
 layout: post
 title: "Photos"
 categories: Personal
-child_nav_order: reversed
 ---
 
 
@@ -37,6 +36,5 @@ child_nav_order: reversed
 
 
 ![skier](/assets/IMG_6024.jpeg){: width="auto" height="auto" }
-
 
 ![parang](/assets/IMG_6096.jpeg){: width="auto" height="auto" }
