@@ -51,6 +51,8 @@ After extraction, we will have a file that has the .iso extension.
 
 Launch VirtualBox. Check on Tools from the sidebar and then Select New from the Toolbar.
 
+Image
+
 For Name, you can enter anything that makes sense. The Folder option defines the location where the VM will be saved. From the ISO Image dropdown select Others and select the .iso file that we just downloaded. Select Type as BSD and Version as FreeBSD (64-bit) and then click on Next.
 
 Here we select the amount of RAM and CPU that the VM can use. No need to change anything. Click on Next to continue.

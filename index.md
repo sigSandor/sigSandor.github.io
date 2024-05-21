@@ -11,7 +11,7 @@ New (v1.0)
 
 ![new](/assets/new.png){: width="auto" height="auto" }
 
-Color scheme :)  ->
+
 <button class="btn js-toggle-dark-mode">Toggle Darkmode</button>
 
 <script>
@@ -32,7 +32,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 # Focusing on writing easy-to-read quality documentation
 {: .fs-9 }
 
-First, I would like to credit 3 core components that made this project functionable and gratis. Github/Github Pages, Jekyll website builder, and the original Template repository is from JustTheDocs. 
+First, I would like to credit 3 core components that made this project functionable. Github/Github Pages, Jekyll website builder, and the original Template repository is from JustTheDocs. 
 
 
 {: .fs-6 .fw-300 }
