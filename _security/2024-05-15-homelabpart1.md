@@ -1,22 +1,27 @@
 ---
 layout: post
-title: "Building a VirtualBox Home Lab: Secure Network Topology"
+title: "Network & Security Home Lab"
 categories: Security
-featupurple: True
 has_children: true
+nav_order: 1
+nav_exclude: false
 ---
 
 
-### <span style="color: purple; font-weight: bold;">anything</span>
+## Network & Security Home Lab: 
 
-This post was inspired by this blog by 
-David Varghese
+### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
 
-We will go over mostly the same material, although I changed many bits around here as we will explore in the later sections.
+![banner](/assets/banner.png){: width="auto" height="auto" }
 
+###### Posted ***May 20, 2024***
 
+This post was inspired by this step by step guide and [blog] by David Varghese
+We will go over some of the same material, although I cut quite a bit out and changed different bits around here and there. 
 
-### Item Overview
+   
+
+## Item Overview
 
 - PFsense(Firewall&Router)
 - Active Directory Lab(Domain Contriller & 3 clients)
@@ -25,17 +30,23 @@ We will go over mostly the same material, although I changed many bits around he
 - Malware Analysis Lab (Windows & Linux)
 - Kali & Parrot linux
 
-{: .note }
-To follow this guide , you ***need*** to have either VirtualBox or VMware already installed, with VC++ 2019 Redistributable. 
+## System Requirements
+- 64-bit multi-threaded CPU (minimum 4 cores) with [Virtualization] Support
+- 16GB RAM
+- 250GB Disk Space
+
+
+{: .warning }
+To follow this guide , you ***need*** to have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and guest additions. 
 you can view the Virtuabox guide Here, or follow along.
 
-Downloading pfSense
 
-Go to the following link: Download pfSense Community Edition
-As of writing the latest version of pfSense is 2.7.2.
 
-Select the following:
-Architecture: AMD64 (64-bit)
-Installer: DVD Image (ISO) Installer
-Mirror: Location closest to you
 
+[VirtualBox]: https://www.virtualbox.org/wiki/Downloads
+
+[Virtualization]: https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html
+
+[VC++]: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+[blog]: https://blog.davidvarghese.dev/posts/building-home-lab-part-1/

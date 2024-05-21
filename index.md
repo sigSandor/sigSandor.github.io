@@ -5,14 +5,41 @@ nav_order: 1
 description: "Focusing on Documentation"
 ---
 
-# Focus on writing good documentation
+
+New (v1.0)
+{: .label .label-green }
+
+![new](/assets/new.png){: width="auto" height="auto" }
+
+Color scheme :)  ->
+<button class="btn js-toggle-dark-mode">Toggle Darkmode</button>
+
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Preview dark color scheme';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light side';
+  }
+});
+</script>
+
+
+# Focusing on writing easy-to-read quality documentation
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+First, I would like to credit 3 core components that made this project functionable and gratis. Github/Github Pages, Jekyll website builder, and the original Template repository is from JustTheDocs. 
+
+
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[GitHub Pages][GitHub Pages]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Jekyll][Jekyll]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Just the Docs][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -93,7 +120,7 @@ Just the Docs is committed to fostering a welcoming community.
 [Just the Docs README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
 [GitHub Pages]: https://pages.github.com/
 [Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[GitHub Pages]: https://pages.github.com/
 [customize]: {% link docs/customization.md %}
 [use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
 

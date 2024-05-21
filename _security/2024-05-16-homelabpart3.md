@@ -2,13 +2,18 @@
 layout: post
 title: "Building a VirtualBox Home Lab: Secure Network Topology Part 2"
 categories: Security
-featupurple: False 
-child_nav_order: reversed
-parent: Building a VirtualBox Home Lab: Secure Network Topology
+parent: Network & Security Home Lab
+nav_order: 3
 ---
 
 
-### Building a Virtual Security Home Lab: Part 2 - pfSense Setup & Configuration
+## Network & Security Home Lab: 
+
+### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
+
+![banner](/assets/banner.png){: width="auto" height="auto" }
+
+###### Posted ***May 15, 2024***
 
 A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
 Posted Jan 2, 2024
@@ -17,13 +22,23 @@ Preview Image
 By David Varghese
 9 min read
 
+Building a Virtual Security Home Lab: Part 2 - pfSense Setup & Configuration
+
+A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
+Posted Jan 2, 2024
+Preview Image
+By David Varghese
+9 min read
+
+Banner Background by logturnal on Freepik
+Hacker Image by catalyststuff on Freepik
 
 In this module, we will go over the installation of pfSense. Additionally, we will also complete the initial configuration required to onboard the subnets that make up our lab into pfSense.
 
     Lab Startup
     pfSense is going to be the default gateway and firewall for our home lab. The pfSense VM should be the first VM that is booted. Once the pfSense VM up other VMs in the lab can be launched.
 
-### Download pfSense
+Download pfSense
 
 Go to the following link: Download pfSense Community Edition
 As of writing the latest version of pfSense is 2.7.2.
@@ -219,5 +234,3 @@ From the dropdown select Remove Disk from Virtual Drive. Click on OK to save the
 The .iso file along with the .iso.gz file that was downloaded to create the VM can be deleted if you do not want to store them.
 
 In the next module, we will set up Kali Linux on the LAN interface. This VM will be used to configure and manage pfSense. It will also be used as the attack VM to target the vulnerable systems on the OPT1 (CYBER_RANGE).
-
-Part 3 - Kali Linux Setup

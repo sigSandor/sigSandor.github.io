@@ -1,43 +1,53 @@
 ---
 layout: post
-title: "Building a VirtualBox Home Lab: Secure Network Topology Part 2"
+title: "Part 2 - pfSense Setup & Configuration"
 categories: Security
-featupurple: False 
-child_nav_order: reversed
+parent: Network & Security Home Lab
+nav_order: 2
+
+
 ---
 
+## Network & Security Home Lab: 
 
-Building a Virtual Security Home Lab: Part 2 - pfSense Setup & Configuration
+### <span style="color: pink; font-weight: bold;">Part 2 - pfSense Setup & Configuration</span>
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Jan 2, 2024
-Preview Image
-By David Varghese
-9 min read
+![banner](/assets/banner.png){: width="auto" height="auto" }
 
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
+###### Posted ***May 15, 2024***
 
-In this module, we will go over the installation of pfSense. Additionally, we will also complete the initial configuration required to onboard the subnets that make up our lab into pfSense.
 
-    Lab Startup
-    pfSense is going to be the default gateway and firewall for our home lab. The pfSense VM should be the first VM that is booted. Once the pfSense VM up other VMs in the lab can be launched.
 
-Download pfSense
+In this section, we will go over the basic installation of pfSense. Additionally, we will also complete the initial configuration required to actualize the subnets that form our lab.
 
-Go to the following link: Download pfSense Community Edition
+
+
+{: .note }
+    pfSense is going to be the default gateway and firewall for our home lab. 
+    The pfSense VM should be the first VM that is booted. 
+    Once the pfSense VM up other VMs in the lab can be launched.
+
+### Downloading pfSense
+
+Go to the following : [Download] (pfSense Community Edition)
+
 As of writing the latest version of pfSense is 2.7.2.
 
-Select the following:
-Architecture: AMD64 (64-bit)
-Installer: DVD Image (ISO) Installer
-Mirror: Location closest to you
+### Select an option with the following:
 
-The downloaded file will have the extension .iso.gz. Use a decompression software like 7-Zip to extract the image.
+> Architecture: AMD64 (64-bit)
+
+> Installer: DVD Image (ISO) Installer
+
+> Mirror: Location closest to you
+
+The downloaded file will probably have the extension .iso.gz. 
+
+You can use a decompression software like 7-Zip if you have it already installed to extract the image.
 
 After extraction, we will have a file that has the .iso extension.
 
-pfSense VM Creation
+## pfSense VM Creation
 
 Launch VirtualBox. Check on Tools from the sidebar and then Select New from the Toolbar.
 
@@ -221,3 +231,5 @@ The .iso file along with the .iso.gz file that was downloaded to create the VM c
 In the next module, we will set up Kali Linux on the LAN interface. This VM will be used to configure and manage pfSense. It will also be used as the attack VM to target the vulnerable systems on the OPT1 (CYBER_RANGE).
 
 Part 3 - Kali Linux Setup
+
+[Download]: https://www.pfsense.org/download/

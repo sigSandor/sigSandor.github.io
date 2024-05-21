@@ -1,6 +1,7 @@
-title: SigSite 
-description: 
+title: Gratis Site
+description: aaa
 theme: just-the-docs
+nav_enabled: false
 
 #Links
 url: https://sigSandor.github.io
@@ -13,6 +14,12 @@ color_scheme: dark
 #logo: "/assets/logo.png"
 
 favicon_ico: "/assets/favicon.ico"
+
+callouts:
+  warning:
+    title: note
+    color: green
+
 
 #SEARCH PARAMATERS
 
