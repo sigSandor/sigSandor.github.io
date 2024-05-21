@@ -37,9 +37,12 @@ First, I would like to credit 3 core components that made this project functiona
 
 {: .fs-6 .fw-300 }
 
-[GitHub Pages][GitHub Pages]{: .btn .fs-5 .mb-4 .mb-md-0 }
-[Jekyll][Jekyll]{: .btn .fs-5 .mb-4 .mb-md-0 }
-[Just the Docs][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[GitHub Pages][GitHub Pages]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Jekyll][Jekyll]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Just the Docs][Just the Docs repo]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+
+
+#{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
