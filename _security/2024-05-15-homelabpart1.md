@@ -17,9 +17,6 @@ nav_exclude: false
 ###### Posted ***May 20, 2024***
 
 This post was inspired by this step by step guide and [blog] by David Varghese
-We will go over some of the same material, although I cut quite a bit out and changed different bits around here and there. 
-
-   
 
 ## Item Overview
 
@@ -33,12 +30,20 @@ We will go over some of the same material, although I cut quite a bit out and ch
 ## System Requirements
 - 64-bit multi-threaded CPU (minimum 4 cores) with [Virtualization] Support
 - 16GB RAM
-- 250GB Disk Space
+- 500gb Disk Space
 
 
 {: .warning }
-To follow this guide , you ***need*** to have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and guest additions. 
+To follow this guide , you ***need*** to have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and as well as VBox ***guest additions***. 
 you can view the Virtuabox guide Here, or follow along.
+
+## Building a Secure Network
+
+asdasdas
+
+
+
+In the next module, we will start with the installation and configuration of pfSense.
 
 
 

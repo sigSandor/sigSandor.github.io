@@ -14,7 +14,7 @@ nav_order: 2
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
-###### Posted ***May 15, 2024***
+###### Posted ***May 21, 2024***
 
 
 
@@ -45,7 +45,9 @@ The downloaded file will probably have the extension .iso.gz.
 
 You can use a decompression software like 7-Zip if you have it already installed to extract the image.
 
-After extraction, we will have a file that has the .iso extension.
+After extraction, we will have a file that has the .iso extension. 
+
+> move the ISO to your directory where you would like to store that iso. 
 
 ## pfSense VM Creation
 
