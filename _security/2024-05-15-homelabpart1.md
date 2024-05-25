@@ -27,15 +27,21 @@ This post was inspired by this step by step guide and [blog] by David Varghese
 - Malware Analysis Lab (Windows & Linux)
 - Kali & Parrot linux
 
-## System Requirements
-- 64-bit multi-threaded CPU (minimum 4 cores) with [Virtualization] Support
+## System Recommended Requirements
+- Windows 7 or 10 host OS
+- 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support
 - 16GB RAM
 - 500gb Disk Space
 
 
+
+You can check if Virtualization is enabled by pressing *Shift>Control>Esc* at the same time to open ***Task Manager***. There, under the Performance tab you can see if virtualization is enabled
+
+![taskm1](/assets/taskm1.png)
+
 {: .warning }
-To follow this guide , you ***need*** to have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and as well as VBox ***guest additions***. 
-you can view the Virtuabox guide Here, or follow along.
+To follow along successfully, you ***need*** to have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and as well as VBox guest additions. 
+you can also view a [Virtualization Guide] here.
 
 ## Building a Secure Network
 
@@ -50,7 +56,7 @@ In the next module, we will start with the installation and configuration of pfS
 
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 
-[Virtualization]: https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html
+[Virtualization Guide]: https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html
 
 [VC++]: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
 

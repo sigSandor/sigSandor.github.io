@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a VirtualBox Home Lab: Secure Network Topology Part 1"
+title: "Part 6 - Active Directory Setup"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 6
@@ -9,7 +9,7 @@ nav_order: 6
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
+### <span style="color: pink; font-weight: bold;">Part 6 - Active Directory Setup</span>
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 

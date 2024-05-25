@@ -32,6 +32,11 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 # Focusing on writing easy-to-read quality documentation
 {: .fs-9 }
 
+```yaml
+ Please allow up to *1 week for changes to apply and posts to be updated. 
+```
+
+
  I would like to credit 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from JustTheDocs. 
 
 

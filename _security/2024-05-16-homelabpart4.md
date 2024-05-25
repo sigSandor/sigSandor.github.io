@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a VirtualBox Home Lab: Secure Network Topology Part 4"
+title: "Part 4 - pfSense Firewall configuration"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 4
@@ -8,7 +8,7 @@ nav_order: 4
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
+### <span style="color: pink; font-weight: bold;">Part 4 - pfSense Firewall configuration</span>
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 

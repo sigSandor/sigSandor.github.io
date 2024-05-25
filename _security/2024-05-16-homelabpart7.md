@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a VirtualBox Home Lab: Secure Network Topology Part 1"
+title: "Part 7 - Malware Analysis Lab Setup"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 7
@@ -9,7 +9,7 @@ nav_order: 7
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
+### <span style="color: pink; font-weight: bold;">Part 7 - Malware Analysis Lab Setup</span>
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
