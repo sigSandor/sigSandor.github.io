@@ -15,8 +15,8 @@ nav_exclude: false
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
 ###### Posted ***May 20, 2024***
+This post was inspired by David Varghese's [blog] post.  
 
-This post was inspired by this step by step guide and [blog] by David Varghese
 
 ## Item Overview
 
