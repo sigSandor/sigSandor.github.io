@@ -4,7 +4,7 @@ title: "Part 2 - pfSense Setup & Configuration"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 2
-
+nav_exclude: false
 
 ---
 
@@ -14,7 +14,7 @@ nav_order: 2
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
-###### Posted ***May 21, 2024***
+###### Posted ***May 22, 2024***
 
 
 

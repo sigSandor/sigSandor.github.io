@@ -4,6 +4,7 @@ title: "Building a VirtualBox Home Lab: Secure Network Topology Part 1"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 8
+nav_exclude: true
 ---
 
 

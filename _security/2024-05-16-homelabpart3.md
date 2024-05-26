@@ -4,6 +4,7 @@ title: "Part 3 - Kali Linux setup"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 3
+nav_exclude: false
 ---
 
 
@@ -13,42 +14,47 @@ nav_order: 3
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
-###### Posted ***May 15, 2024***
+###### Posted ***May 26, 2024***
 
 Building a Virtual Security Home Lab: Part 3 - Kali Linux Setup
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
+A step-by-step guide for building your very own self-paced Cybersecurity Home Lab using VirtualBox
 
+In this module, we are going to install Kali Linux. This VM will be used for 
 
-5 min read
+We will use this VM in the next module also to complete the pfSense final setup.\
 
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
+# Download Kali Linux
 
-In this module, we are going to install Kali Linux. We will use this VM in the next module also to complete the pfSense setup.
-Download Kali Linux
+Go to the following link: | [Kali linux]
 
-Go to the following link: Get Kali | Kali Linux
+As of writing the latest version of Kali Linux is 2024.1.
 
-Download the 64-bit Recommended Installer. The image is ~4GB in size so it will take some time to download.
-
-As of writing the latest version of Kali Linux is 2023.4.
+Download the 64-bit Recommended Installer. The image is just under 4GB in size so depending on your internet speeds it will take some time to download.
 
 Once it is downloaded we should have an .iso file.
+Move this file to the folder where the pfSense iso is stored.
 
-Kali Linux VM Creation
+# Kali Linux VM Creation
 
 Launch VirtualBox. Select Tools from the sidebar and then click on New from the toolbar.
 
-Give the VM a Name. Set the Folder option to the location where the Home Lab VMs are going to be saved. Leave the ISO Image option empty. Select Type as Linux and Version as Debian (64-bit) then click on Next.
+Give the VM a Name. Set the Folder option to the location where the Home Lab VMs are going to be saved. ***Leave the ISO Image option empty with the option on none selected***
+Select Type as Linux and Version as Debian (64-bit) then click on Next.
+vbox9 image
 
-Leave everything on its default values. Click on Next.
+
+You can leave everything on its default values, or set the range I previously mentioned of 4096 Base Mem and 4 CPU cores. Remember, go with what works on your setup. 
+
+Click on ***Next***.
 
 Increase the Disk Size to 80GB and click on Next.
 
 Ensure that all the settings look right and click on Finish.
 
-Adding VM to Group
+Vbox10 
+
+# Adding VM to Group
 
 Right-click on the Kali Linux VM from the sidebar, select Move to Group -> [New].
 
@@ -60,41 +66,57 @@ Now both the groups should be nested inside a group called New Group. Right-clic
 
 In the end, we should have the following structure:
 
-Kali Linux VM Configuration
+vbox11
+
+# Kali Linux VM Configuration
 
 Select the Kali Linux VM and then from the toolbar select Settings.
 
-System Configuration
+### System Configuration
 
 Go to System -> Motherboard. For the Boot Order option ensure that the Hard Disk is on the top followed by Optical. Uncheck Floppy.
 
-Boot Image Configuration
+### Boot Image Configuration
 
 Go to the Storage tab. Select the Empty disk present below Controller: IDE then click on the small disk icon on the right side of the Optical Drive option.
+
+vbox12
 
 Select Choose a disk file and then select the downloaded .iso file for Kali Linux.
 
 The final result should look as follows:
 
-Network Configuration
+### Network Configuration
 
 Go to Network -> Adapter 1. For the Attached to field select Internal Network. For Name select LAN 0. Expand the Advanced section. For Adapter Type select Paravirtualized Network (virtio-net).
 
-Kali Linux Installation
+# Kali Linux Installation
 
-Remember to boot the pfSense VM if it was shut down before starting the Kali Linux installation.
+***Remember to boot the pfSense VM if it was shut down before starting the Kali Linux installation.***
 
 Select Kali Linux from the sidebar and click on Start on the toolbar.
 
 From the Installer menu select Graphical Install.
+The first steps will be about your Language, location and keyboard layout. 
+select whatever makes sense, or just enter.
 
-Select your Language, location and keyboard layout.
+vbox16
 
-Enter a name for the VM. You can use any name here. The hostname is used to identify the system on the network. The hostname can also be changed after installation.
 
-Leave the domain name input blank and click on Continue.
+You will soon be required to enter a name for the VM. You can use any name here. The hostname is used to identify the system on the network. note: The hostname can be changed after installation.
 
-Enter your name. This name will be shown on the login screen.
+Leave the domain name input blank in the next section and click on *Continue*.
+
+Next,
+Enter your desired name and credentials. This name will be shown on the login screen.
+
+If you often forget passwords, you can quit the installation now and create a *clone* using VirualBox.
+
+This is a good idea just for skipping installation times. 
+ 
+You can do so by right clicking on your (closed) VM and clicking clone. Or alternatively CNTL + O
+
+
 
 The username is used to create the home directory for the user. All the user-related configurations are stored in this folder.
 
@@ -114,6 +136,8 @@ Select Yes and click on Continue.
 
 After the base system installation is complete we need to choose the desktop environment that will be installed. I have selected GNOME for installation.
 
+vbox17
+
 The default is XFCE it does not look as pretty as GNOME it is much lighter and should have better performance. KDE Plasma is the fanciest with a lot of bells and whistles. I would only recommend KDE if you can assign 2 cores and 4GB RAM for this VM. Once the desktop environment is selected click on Continue.
 
 The installation will take some time. Select Yes and click on Continue.
@@ -122,7 +146,7 @@ Click on Continue to Reboot the system.
 
 After reboot, we should see the Login screen. Click Enter to log in. Enter the password that was configured during the installation.
 
-Post-Installation Configuration
+#   Post-Installation Configuration
 
 Kali Linux installer can detect when it is run from a VM because of this it automatically installs Guest Addons.
 
@@ -147,3 +171,7 @@ The .iso file that was downloaded to create the VM can be deleted now if you do 
 In the next module, we will access the pfSense Web UI and complete the remaining configuration.
 
 Part 4 - pfSense Firewall Configuration
+
+---
+
+[Kali linux]: https://www.kali.org/get-kali/#kali-installer-images

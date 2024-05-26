@@ -3,6 +3,8 @@ layout: default
 title: Home
 nav_order: 1
 description: "Focusing on Documentation"
+nav_exclude: true
+
 ---
 
 
@@ -11,6 +13,26 @@ New (v1.0)
 
 ![new](/assets/new.png){: width="auto" height="auto" }
 
+
+# Focusing on writing easy-to-read quality documentation
+{: .fs-9 }
+
+{: .warning }
+ Please allow up to *1 week for changes to apply and posts to be updated. 
+
+
+
+ I would like to credit 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from JustTheDocs. 
+
+
+{: .fs-6 .fw-300 }
+
+[GitHub Pages][GitHub Pages]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Jekyll][Jekyll]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Just the Docs][Just the Docs repo]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+
+
+[source file for this page]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 <button class="btn js-toggle-dark-mode">Toggle Darkmode (click twice to confirm)</button>
 
@@ -28,27 +50,6 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-
-# Focusing on writing easy-to-read quality documentation
-{: .fs-9 }
-
-```yaml
- Please allow up to *1 week for changes to apply and posts to be updated. 
-```
-
-
- I would like to credit 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from JustTheDocs. 
-
-
-{: .fs-6 .fw-300 }
-
-[GitHub Pages][GitHub Pages]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Jekyll][Jekyll]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Just the Docs][Just the Docs repo]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-
-
-[source file for this page]{: .btn .fs-5 .mb-4 .mb-md-0 }
-
 ---
 
 
@@ -62,7 +63,6 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 [GitHub Pages]: https://pages.github.com/
 [Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
 [GitHub Pages]: https://pages.github.com/
-[customize]: {% link docs/customization.md %}
 [use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
 
 

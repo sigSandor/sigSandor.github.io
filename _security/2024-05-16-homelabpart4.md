@@ -4,6 +4,8 @@ title: "Part 4 - pfSense Firewall configuration"
 categories: Security
 parent: Network & Security Home Lab
 nav_order: 4
+nav_exclude: false
+
 ---
 
 ## Network & Security Home Lab: 
@@ -12,7 +14,7 @@ nav_order: 4
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
-###### Posted ***May 15, 2024***
+###### In Progress ***May 26, 2024***
 
 Building a Virtual Security Home Lab: Part 3 - Kali Linux Setup
 
