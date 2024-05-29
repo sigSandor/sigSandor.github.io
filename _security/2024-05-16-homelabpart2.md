@@ -60,10 +60,8 @@ For Name, you should enter PFsense or similar. The Folder option defines the loc
 
 ![vbox3](/assets/vbox3.png){: width="auto" height="auto" }
 
-Here we select the amount of RAM and CPU that the VM can use. As a Baseline, I will choose 4096 Base memory and 4 CPU processors. Click on ***Next*** to continue. 
+Here we select the amount of RAM and CPU that the VM can use. As a Baseline, You should choose 2048 Base memory and 2 CPU cores. Click on ***Next*** to continue. 
 
-{: .warning }
-Feel free to use less memory and processors according to your personal setup.
 
 ![vbox4](/assets/vbox4.png){: width="auto" height="auto" }
 

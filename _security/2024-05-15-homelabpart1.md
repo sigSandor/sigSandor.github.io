@@ -7,8 +7,8 @@ nav_order: 1
 nav_exclude: false
 ---
 
-
-## Network & Security Home Lab: 
+{: .text-center }
+# Network & Security Home Lab: 
 
 ### <span style="color: pink; font-weight: bold;">Part 1 - Secure Network Topology</span>
 
