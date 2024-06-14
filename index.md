@@ -14,11 +14,11 @@ New (v1.0)
 ![new](/assets/new.png){: width="auto" height="auto" }
 
 
-# Focusing on writing easy-to-read quality documentation
+# Focusing on writing easy-to-read quality documentation 
 {: .fs-9 }
 
 {: .warning }
- Please allow up to *1 week for changes to apply and posts to be updated. 
+ Please allow up to *2-3 weeks for changes to apply on Github. 
 
 
 
