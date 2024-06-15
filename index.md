@@ -8,7 +8,7 @@ nav_exclude: true
 ---
 
 
-New (v1.0)
+New (v1.2)
 {: .label .label-green }
 
 ![new](/assets/new.png){: width="auto" height="auto" }
