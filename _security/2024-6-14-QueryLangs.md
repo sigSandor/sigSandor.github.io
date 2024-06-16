@@ -4,6 +4,8 @@ title: "Query Languages"
 categories: Security
 nav_order: 3
 nav_exclude: true
+---
+
 
 {: .text-center }
 # Query languages: KQL & SQL 
