@@ -3,7 +3,7 @@ layout: post
 title: "All about Windows"
 categories: Security
 nav_order: 3
-nav_exclude: false
+nav_exclude: true
 ---
 
 

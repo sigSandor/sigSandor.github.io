@@ -8,9 +8,10 @@ nav_exclude: false
 
 ---
 
-## Network & Security Home Lab: 
+{: .text-center }
+# Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 2 - pfSense initial Setup & Configuration</span>
+### <span style="color: orange; font-weight: bold;">Part 2 - pfSense initial Setup & Configuration</span>
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
@@ -18,54 +19,66 @@ nav_exclude: false
 
 
 
-In this section, we will go over the basic installation of pfSense. Additionally, we will also complete the initial configuration required to actualize the subnets that form our lab.
+In this section, we will go over the basic installation of `pfSense`. Additionally, we will also complete the inital system configuration for our lab.
 
 
 
 {: .warning }
 pfSense is going to be the default gateway and firewall for our home lab. 
-The pfSense VM should be the first VM that is booted. 
-Once the pfSense VM up other VMs in the lab can be launched.
+This means that pfSense should be the first VM that is booted. 
+Once pfSense is launched other VMs in the lab can be launched following.
 
-### Downloading pfSense
+# Downloading pfSense
 
-Go to the following : [Download] (pfSense Community Edition)
+Go to the page : `pfSense Community Edition` [Download] 
 
-As of writing the latest version of pfSense is 2.7.2.
+As of May 22, 2024 the latest version of pfSense is 2.7.2.
+
+You will most likely have to create an account with NetGate, who is partnered with pfSense.
+Account setup is *free*, but will require some self navigation to access the download.
+
+![vbox18.png](/assets/vbox18.png){: width="auto" height="auto" }
 
 ### Select an option with the following:
 
-> Architecture: AMD64 (64-bit)
+> Architecture: `AMD64 (64-bit)`
 
-> Installer: DVD Image (ISO) Installer
+> Installer: `DVD Image (ISO) Installer`
 
-> Mirror: Location closest to you
+> Mirror: `Location closest to you`
 
-The downloaded file will probably have the extension .iso.gz. 
+The downloaded file should have the extension of `.iso.gz`
 
-You can use a decompression software like 7-Zip if you have it already installed to extract the image.
+You can use *7-Zip* or another decompression software to extract the image.
 
-After extraction, we will have a file that has the .iso extension. 
-
-> move the ISO to your directory where you would like to store that iso. 
+After extraction, we should have a file that has the `.iso` extension. 
 
 
-## pfSense VM Creation
+> Optionally, you can move the ISO to a new directory in which you will be storing your lab iso. 
+ 
+![vbox19.png](/assets/vbox19.png){: width="auto" height="auto" }
 
-Launch VirtualBox. Check on Tools from the sidebar and then Select New from the Toolbar.
+
+# pfSense VM Creation
+
+Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 
 
+> For name selection, PfSense is fine. 
+> The Folder option defines the location where the VM will be saved (I created a new folder called VirtualBox VMs)
 
-For Name, you should enter PFsense or similar. The Folder option defines the location where the VM will be saved (Choose a folder with Structure as pictured. From the ISO Image dropdown select *Others* and select the .iso file that we just downloaded (Please remember to also save the ISO in a desginated folder with similar files. Select Type as `BSD` and Version as `FreeBSD (64-bit)`` and then click on ***Next***.
+> From the ISO Image dropdown select *Others* in oreder to select the .iso file that we just extracted. 
+> Select Type as `BSD` and Version as `FreeBSD (64-bit)` and then click on `Next`.
 
 ![vbox3](/assets/vbox3.png){: width="auto" height="auto" }
 
-Here we select the amount of RAM and CPU that the VM can use. As a Baseline, You should choose 2048 Base memory and 2 CPU cores. Click on ***Next*** to continue. 
+On the next page, we can select the amount of RAM and CPU that the VM can use. As a Baseline, You can choose 1024-2048 Base memory and 1-2 CPU cores. Click on `Next` to continue. 
+> (No need for extraneous Memory or Enabling EFI)
 
 
 ![vbox4](/assets/vbox4.png){: width="auto" height="auto" }
 
-On the next page, we can choose the amount of storage space to reserve for the VM. Baseline, you can enter 20GB just fine.
+On the next page, we can choose the amount of storage space to reserve for the VM. 20GB is just fine for this less resource heavy VM.
 
 ![vbox5](/assets/vbox5.png){: width="auto" height="auto" }
 
@@ -73,82 +86,106 @@ On the next page, we can choose the amount of storage space to reserve for the V
 ### Final Confirmation
 
 ![vbox6](/assets/vbox6.png){: width="auto" height="auto" }
- > Confirm that everything looks right and then click on Finish.
+ > Confirm that everything looks right and then click on `Finish`.
  > Once done we should see the newly created VM in the sidebar.
  
 
-### Grouping the First VM
+### Group the First VM
 
-I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing the same kind of groups to stay organized with a large number of virtual machines.
+I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing organization since we are dealing with a large number of virtual machines.
 
 > To Create a group
 
-Right-click on the pfSense VM from the sidebar, select Move to Group -> *New*. The VM will now be added to a Group called New Group.
-Right-click on the Group, and select Rename Group. Name the Group Firewall.
+Right-click on the pfSense VM from the sidebar, `select Move to Group -> *New*`. The VM will now be added to a Group called New Group.
+
+Right-click on the Group, and select `Rename Group`. Name the Group ***Firewall***.
 
 The final result should match the following:
 
 ![vbox7](/assets/vbox7.png){: width="auto" height="auto" }
 
-### pfSense Basic Virtual Configuration
+# pfSense Basic Virtual Configuration
 
-Before we boot the VM we need to configure some settings related to VirtualBox. Select the pfSense VM from the sidebar and then click on Settings.
+Before we boot the VM we need to configure some settings related to VirtualBox. Select the pfSense VM from the sidebar and then click on `Settings`.
+
+![vbox20.png](/assets/vbox20.png){: width="auto" height="auto" }
 
 # System Configuration
 
-Select System -> Motherboard in the Boot Order section use the arrows to move the Hard Disk to the top, Optical should be next. Ensure that Floppy is unchecked.
+Select `System -> Motherboard` in the Boot Order section use the arrows to move `the Hard Disk` to the top, `Optical` should be next. Ensure that `Floppy` is unchecked.
+
+![vbox21.png](/assets/vbox21.png){: width="auto" height="auto" }
+
+{: .warning }
+You may have to drag the top of the window *upwards* in order to hit the next button.
 
 # Audio & USB Configuration
 
-Go to the Audio tab and disable Audio option. Since the VM we are configuring is a router we will not be using audio.
-Also,
+> Go to the Audio tab and disable Audio option. Since the VM we are configuring is a router we will not be using audio. (optional)
 
-Go to the USB tab and uncheck the Enable USB Controller option. Since this VM we are configuring is a router we will not need USB support.
+
+> Go to the USB tab and uncheck the Enable USB Controller option. Since this VM we are configuring is a router we will not need USB support. (optional)
 
 # Network Configuration
 
-Go to Network -> Adapter 1. For the Attached to field select NAT. Expand the Advanced section and for Adaptor Type select Paravirtualized Network (virtio-net).
+Go to `Network -> Adapter 1`. For the Attached to field select `NAT`. Expand the `Advanced` section and for Adaptor Type select `Paravirtualized Network (virtio-net)`.
 
-the next 3 steps will be very similar. Enabling Network adapter, Creating a LAN and then create a paravirtualized network. Promiscuous mode can be set to deny.
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
-Select Adapter 2. Tick the Enable Network Adapter option. For the Attached to option select Internal Network. For Name enter LAN 0. Expand the Advanced section. For Adapter Type select Paravirtualized Network (virtio-net).
+![vbox22.png](/assets/vbox22.png){: width="auto" height="auto" }
+![vbox23.png](/assets/vbox23.png){: width="auto" height="auto" }
+![vbox24.png](/assets/vbox24.png){: width="auto" height="auto" }
+![vbox25.png](/assets/vbox25.png){: width="auto" height="auto" }
 
-Select Adapter 3. Tick the Enable Network Adapter option. For the Attached to option select Internal Network. For Name enter LAN 1. Expand the Advanced section. For Adapter Type select Paravirtualized Network (virtio-net).
+</details>
 
-Select Adapter 4. Tick the Enable Network Adapter option. For the Attached to option select Internal Network. For Name enter LAN 2. Expand the Advanced section. For Adapter Type select Paravirtualized Network (virtio-net).
 
-Once done click on OK to save the changes and close the configuration menu.
+The next 3 steps will be very similar. refer to images if need be.
+
+Select `Adapter 2`. Tick the *Enable Network Adapter option*. For the Attached to option select `Internal Network`. For Name enter `LAN 0`. Expand the Advanced section. For Adapter Type select `Paravirtualized Network (virtio-net)`.
+
+Select `Adapter 3`. Tick the *Enable Network Adapter option*. For the Attached to option select `Internal Network`. For Name enter `LAN 1`. Expand the Advanced section. For Adapter Type select `Paravirtualized Network (virtio-net)`.
+
+Select `Adapter 4`. Tick the Enable Network Adapter option. For the Attached to option select `Internal Network`. For Name enter `LAN 2`. Expand the Advanced section. For Adapter Type select `Paravirtualized Network (virtio-net)`.
+
+Once done click on `OK` to save the changes and close the configuration menu.
 
 # VirtualBox Network Settings: All You Need to Know 
-Additionally you can find a [Virtualbox Network Settings Guide] here.
 
-    VirtualBox by defualt only allows us to configure 4 interfaces using the UI. Towards the end of the guide we will see how to add more interfaces using VirtualBox Command line interface.
+{: .warning }
+VirtualBox by defualt only allows us to configure 4 interfaces using the UI. Towards the end of the guide we will see how to add more interfaces using VirtualBox Command line interface.
+
+Additionally, you can find a [Virtualbox Network Settings Guide] here.
 
 # pfSense Installation
 
-Select the pfSense VM from the sidebar and hit the Start icon.
-
 Essentially, the installation process will be hitting quite a few times.
-Please read along if you would like to confirm the correct setup steps. 
 
-Initally, an agreement will appear. Press Enter if you would like to Accept the agreement. 
+> To start select the pfSense VM from the sidebar and hit the `Start` icon.
+
+*Please read along if you would like to confirm the correct setup steps.* 
+
+> Initally, an agreement will appear. Press Enter if you would like to Accept the agreement. 
+
 (note you will have to accept the agreement to use the features of this VM)
 
-Press Enter to start the Installation.
+> Press Enter to start the Installation.
 
-Press Enter to select the Auto (ZFS) partition option.
+> Press Enter to select the Auto (ZFS) partition option.
 
-Press Enter to select Proceed with Installation.
+> Press Enter to select Proceed with Installation.
 
-Press Enter to select Stripe - No Redundancy.
+> Press Enter to select Stripe - No Redundancy.
 
-Use the Spacebar key to select the Hard Drive (ada0) then press Enter to continue.
+> Use the Spacebar key to select the Hard Drive (ada0) then press Enter to continue.
 
-Use the Left Arrow to select YES and then press Enter to continue.
+> Use the Left Arrow to select YES and then press Enter to continue.
 
 Wait for the installation to complete.
 
 Press Enter to Reboot the VM.
+
 
 # pfSense Configuration
 
