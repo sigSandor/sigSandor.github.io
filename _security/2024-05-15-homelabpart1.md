@@ -17,9 +17,9 @@ nav_exclude: false
 ###### Posted ***May 20, 2024***
 This guide was inspired by David Varghese's [blog] post.
 
-The following guide will not be easy, it will be catering to entry level IT and CyberSecurity folk who already have a basic understanding of virtualbox, virtualization, and windows experience.
+The following guide will not be easy or short, it will be catering to entry level IT and CyberSecurity folk who already have a basic understanding of virtualbox, virtualization, and windows experience.
 
-
+----
 
 ## Item Overview
 

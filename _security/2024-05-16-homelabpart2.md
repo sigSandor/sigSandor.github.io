@@ -19,9 +19,9 @@ nav_exclude: false
 
 
 
-In this section, we will go over the basic installation of `pfSense`. Additionally, we will also complete the inital system configuration for our lab.
+In this module, we will go over the basic installation of ***pfSense***. Additionally, we will also complete the system configuration, and network interfaces for our lab.
 
-
+----
 
 {: .warning }
 pfSense is going to be the default gateway and firewall for our home lab. 
@@ -30,9 +30,9 @@ Once pfSense is launched other VMs in the lab can be launched following.
 
 # Downloading pfSense
 
-Go to the page : `pfSense Community Edition` [Download] 
+Go to the page : `pfSense Community Edition` > [Download] 
 
-As of May 22, 2024 the latest version of pfSense is 2.7.2.
+As of May 22, 2024 the latest version of pfSense is `2.7.2`.
 
 You will most likely have to create an account with NetGate, who is partnered with pfSense.
 Account setup is *free*, but will require some self navigation to access the download.
@@ -90,7 +90,7 @@ On the next page, we can choose the amount of storage space to reserve for the V
  > Once done we should see the newly created VM in the sidebar.
  
 
-### Group the First VM
+### Grouping our First VM
 
 I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing organization since we are dealing with a large number of virtual machines.
 
@@ -170,6 +170,19 @@ Essentially, the installation process will be hitting quite a few times.
 
 (note you will have to accept the agreement to use the features of this VM)
 
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
+
+![vbox26.png](/assets/vbox26.png){: width="auto" height="auto" }
+![vbox27.png](/assets/vbox27.png){: width="auto" height="auto" }
+![vbox28.png](/assets/vbox28.png){: width="auto" height="auto" }
+![vbox29.png](/assets/vbox29.png){: width="auto" height="auto" }
+![vbox30.png](/assets/vbox30.png){: width="auto" height="auto" }
+![vbox31.png](/assets/vbox31.png){: width="auto" height="auto" }
+![vbox32.png](/assets/vbox32.png){: width="auto" height="auto" }
+![vbox33.png](/assets/vbox33.png){: width="auto" height="auto" }
+</details>
+
 > Press Enter to start the Installation.
 
 > Press Enter to select the Auto (ZFS) partition option.
@@ -189,53 +202,91 @@ Press Enter to Reboot the VM.
 
 # pfSense Configuration
 
-Once pfSense reboots the first order of business is to onboard the adapters we configured in the VM settings.
+Once pfSense reboots, the first priority is to configure the adapters we created in the VirtualBox settings.
 
-Should VLANs be set up now? n
-In the next step, we will configure the interfaces manually.
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
-Enter the WAN interface name: vtnet0
-Enter the LAN interface name: vtnet1
-Enter the Optional 1 interface name: vtnet2
-Enter the Optional 2 interface name: vtnet3
+![vbox26.png](/assets/vbox26.png){: width="auto" height="auto" }
+![vbox27.png](/assets/vbox27.png){: width="auto" height="auto" }
+![vbox28.png](/assets/vbox28.png){: width="auto" height="auto" }
+![vbox29.png](/assets/vbox29.png){: width="auto" height="auto" }
+![vbox30.png](/assets/vbox30.png){: width="auto" height="auto" }
+![vbox31.png](/assets/vbox31.png){: width="auto" height="auto" }
+![vbox32.png](/assets/vbox32.png){: width="auto" height="auto" }
+![vbox33.png](/assets/vbox33.png){: width="auto" height="auto" }
+</details>
 
-Do you want to proceed?: y
 
-Since the WAN interface of pfSense is managed by VirtualBox it has been assigned an IPv4 address by the VirtualBox DHCP server. pfSense has also assigned an IPv4 address to the LAN interface using its DHCP service. The OPT1 and OPT2 interfaces have not been assigned any IP address. We do not want the IP addresses of the interfaces to change on boot so we will assign static IPv4 addresses to the LAN, OPT1 and OPT2 interfaces.
+> Should VLANs be set up now? n
 
-    The IP address of the WAN interface can be different in your case since it is assignment randomly by the VirtualBox DHCP server.
+> In the next step, we will configure the interfaces manually.
+
+
+Enter the WAN interface name: `vtnet0`
+
+Enter the LAN interface name: `vtnet1`
+
+Enter the Optional 1 interface name: `vtnet2`
+
+Enter the Optional 2 interface name: `vtnet3`
+
+Do you want to proceed?: `y`
+
+Since the `WAN` interface of pfSense is managed by VirtualBox, it has been assigned an IPv4 address by the VirtualBox DHCP server. pfSense has also assigned an IPv4 address to the `LAN` interface using its own DHCP service. The `OPT1` and `OPT2` interfaces have not been assigned any IP address yet.. We do not want the IP addresses of the interfaces to change on boot. 
+
+We will have to assign static IPv4 addresses to the `LAN`, `OPT1` and `OPT2` interfaces.
+
+{: .warning }
+The IP address of the `WAN` interface can be different in your case since it is assignment randomly by the VirtualBox DHCP server.
 
 # Configuring LAN (vtnet1)
 
-Enter 2 to select “Set interface(s) IP address”. Enter 2 to select the LAN interface.
+> Enter `2` to select “Set interface(s) IP address”. 
 
-Configure IPv4 address LAN interface via DHCP?: n
-Enter the new LAN IPv4 address: 10.0.0.1
-Enter the new LAN IPv4 subnet bit count: 24
+Then again, 
 
-For the next question directly press Enter. Since this is a LAN interface we do not have to worry about configuring the upstream gateway.
+> Enter `2` to select the LAN interface.
 
-Configure IPv6 address LAN interface via DHCP6: n
-For the new LAN IPv6 address question press Enter
-Do you want to enable the DHCP server on LAN?: y
-Enter the start address of the IPv4 client address range: 10.0.0.11
-Enter the end address of the IPv4 client address range: 10.0.0.243
-Do you want to revert to HTTP as the webConfigurator protocol?: n
+Configure IPv4 address LAN interface via DHCP?: `n`
+Enter the new LAN IPv4 address: `10.0.0.1`
+Enter the new LAN IPv4 subnet bit count: `24`
 
-pfSense will use the inputs ywe provided and configure the interface.
-Press Enter to complete the LAN interface configuration.
+![vbox34.png](/assets/vbox34.png){: width="auto" height="auto" }
 
-Once the changes apply we see that the IP address of the LAN interface has changed to the IP address that we provided.
+> For the next question just press `Enter` for none. 
+
+Because this is a `LAN` interface, we will not have to worry about configuring the upstream gateway.
+
+
+Configure IPv6 address LAN interface via DHCP6: `n`
+For the new LAN IPv6 address question press `Enter`
+Do you want to enable the DHCP server on LAN?: `y`
+Enter the start address of the IPv4 client address range: `10.0.0.11`
+Enter the end address of the IPv4 client address range: `10.0.0.243`
+Do you want to revert to HTTP as the webConfigurator protocol?: `n`
+
+![vbox35.png](/assets/vbox35.png){: width="auto" height="auto" }
+
+pfSense will use the inputs we provided and automatically configure the interface.
+
+> Press `Enter` to complete the `LAN` interface configuration.
+
+![vbox36.png](/assets/vbox36.png){: width="auto" height="auto" }
 
 # Configuring OPT1 (vtnet2)
 
-Enter 2 to select “Set interface(s) IP address”. Enter 3 to select the OPT1 interface.
+Enter `2` to select “Set interface(s) IP address”. Enter `3` this time in order to select the `OPT1` interface.
 
-Configure IPv4 address OPT1 interface via DHCP?: n
-Enter the new OPT1 IPv4 address: 10.6.6.1
-Enter the new OPT1 IPv4 subnet bit count: 24
+Configure IPv4 address OPT1 interface via DHCP?: `n`
+Enter the new OPT1 IPv4 address: `10.6.6.1`
+Enter the new OPT1 IPv4 subnet bit count: `24`
 
-For the next question directly press Enter. Since OPT1 is a LAN interface we do not have to worry about configuring the upstream gateway.
+![vbox37.png](/assets/vbox37.png){: width="auto" height="auto" }
+
+> For the next question directly press `Enter`. 
+
+Since `OPT1` is a `LAN` interface we do not have to worry about configuring the upstream gateway.
 
 Configure IPv6 address OPT1 interface via DHCP6: n
 For the new OPT1 IPv6 address question press Enter
