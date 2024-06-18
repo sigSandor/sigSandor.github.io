@@ -15,7 +15,7 @@ nav_exclude: false
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }
 
-###### Posted ***May 26, 2024***
+###### Posted ***June 16, 2024***
 
 
 In this module, we are going to install Kali Linux. This VM will be used for red teaming.
