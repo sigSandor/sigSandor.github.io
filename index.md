@@ -20,8 +20,6 @@ New (v1.2)
 {: .warning }
  Please allow up to *2-3 weeks for changes to apply on Github. 
 
-
-
  I would like to credit 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from JustTheDocs. 
 
 
