@@ -17,6 +17,9 @@ New (v1.2)
 # Focusing on writing easy-to-read quality documentation 
 {: .fs-9 }
 
+
+Welcome to my website and cybersecurity blog. It is a valuable resource that provides insight into cybersecurity terms and knowledge, write ups (coming 2024), and much more. This website can be an awesome tool for reference, searching, and quick access to other resources. While I have pride in my skills to write, I included many cheatsheets and external links for those who prefer a more refined experience. Please enjoy. -Alex
+
 {: .warning }
  Please allow up to *2-3 weeks for changes to apply on Github. 
 

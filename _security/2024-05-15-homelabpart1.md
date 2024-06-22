@@ -10,6 +10,8 @@ nav_exclude: false
 {: .text-center }
 # Network & Security Home Lab: 
 
+
+{: .text-center }
 ### <span style="color: orange; font-weight: bold;">Part 1 - Introduction</span>
 
 ![banner](/assets/banner.png){: width="auto" height="auto" }

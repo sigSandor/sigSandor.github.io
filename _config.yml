@@ -56,14 +56,20 @@ search:
 collections:
   security:
     permalink: "/:collection/:path/"
+    output: true  
+  networking:
+    permalink: "/:collection/:path/"
     output: true
   personal:
     permalink: "/:collection/:path/"
     output: true
 
+
 just_the_docs:
   collections:
     security:
       name: Security
+    networking:
+      name: Networking
     personal:
       name: Personal

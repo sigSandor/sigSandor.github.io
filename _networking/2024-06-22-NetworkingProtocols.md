@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "KQL basics"
-categories: Security
+title: "Networking Protocols"
+categories: Networking
+has_children: true
+nav_order: 1
 nav_exclude: false
 ---
 
@@ -29,8 +31,6 @@ https://kusto.azure.com/publicfreecluster
 https://www.youtube.com/watch?v=8JqwHaIW_Zc
 ```
 
-[kql cheat sheet]{: .btn .fs-5 .mb-4 .mb-md-0 } 
-
 
 A record will run horizontally, Marked in the red boxes. 
 
@@ -39,11 +39,6 @@ Fields will run vertically, marked in blue.
 > Within that database, I queried `Products` and then sampled the top 10 results with `take`.
 
 ![adx2.png](/assets/adx2.png){: width="auto" height="auto" }
-
-----
-
-# Most common uses for KQL
-
 
 
 ## LAW (Log Analytic Workspace)
@@ -74,35 +69,33 @@ Fields will run vertically, marked in blue.
 
 ----
 
-# Syntax and Operators:
+# Operators:
 
 
-### `where:` Filters a table to the subset of rows that satisfy a predicate.
+### where: Filters a table to the subset of rows that satisfy a predicate.
 - the `where` and `filter` statements are equivalent in KQL
 
-### `pipe:` 
+### pipe: 
 
-### `and:`
+### and: 
 
-### ``
+###
 
-### ` `
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-### ``
+###
 
-
-[kql cheat sheet]: https://www.cyber.engineer/kql-cheat-sheet-the-basics/
