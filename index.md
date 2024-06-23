@@ -7,9 +7,9 @@ nav_exclude: true
 
 ---
 
-
-New (v1.2)
 {: .label .label-green }
+New (v1.4)
+
 
 ![new](/assets/new.png){: width="auto" height="auto" }
 
@@ -23,19 +23,23 @@ Welcome to my website and cybersecurity blog. It is a valuable resource that pro
 {: .warning }
  Please allow up to *2-3 weeks for changes to apply on Github. 
 
- I would like to credit 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from JustTheDocs. 
+ I would love to credit the 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from `JustTheDocs`. 
 
-
-{: .fs-6 .fw-300 }
 
 [GitHub Pages][GitHub Pages]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Jekyll][Jekyll]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Just the Docs][Just the Docs repo]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 
-[source file for this page]{: .btn .fs-5 .mb-4 .mb-md-0 }
+----
 
-<button class="btn js-toggle-dark-mode">Toggle Darkmode (click twice to confirm)</button>
+### CyberSec news feed: 
+
+[Threatable.io]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Bleeping computer]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Sans edu]{: .btn .fs-5 .mb-4 .mb-md-0 }
+
+<button class="btn btn-primary js-toggle-dark-mode">Toggle Darkmode (click twice to confirm)</button>
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
@@ -56,7 +60,9 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 [Jekyll]: https://jekyllrb.com
 [Jekyll configuration]: https://jekyllrb.com/docs/configuration/
-[source file for this page]: https://github.com/just-the-docs/just-the-docs/blob/main/index.md
+[Threatable.io]: https://www.threatable.io/
+[Bleeping computer]: https://www.bleepingcomputer.com/
+[Sans edu]:https://isc.sans.edu/
 [Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
 [Just the Docs]: https://just-the-docs.com
 [Just the Docs repo]: https://github.com/just-the-docs/just-the-docs

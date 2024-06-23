@@ -18,19 +18,24 @@ nav_exclude: false
 
 - WORM language (Write Once Read Many)
 
-> These 2 links will show you how to set up a free Azure Data Explorer to test the upcoming Query basics.
+> These 3 links will allow you to access a test enviroment, and the video tutorial show you how to test the upcoming Query basics.
 
 
+LAW
+```scss
+https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade
+```
+ADX
 ```scss
 https://kusto.azure.com/publicfreecluster
 ```
 
+Tutorial
 ```scss
 https://www.youtube.com/watch?v=8JqwHaIW_Zc
 ```
 
-[kql cheat sheet]{: .btn .fs-5 .mb-4 .mb-md-0 } 
-
+----
 
 A `record` will run horizontally, Marked in the <span style="color: indianred; font-weight: bold;">red</span> boxes.
 
@@ -47,7 +52,6 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 ----
 
 # Most common uses for KQL
-
 
 
 ## LAW (Log Analytic Workspace)
@@ -74,6 +78,9 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 
 - Use Cases: Ideal for real-time analytics, IoT applications, telemetry data, customer and operational analytics, and scenarios requiring fast analysis of large datasets.
 
+
+
+[kql cheat sheet]{: .btn .fs-5 .mb-4 .mb-md-0 } 
 
 [kql cheat sheet (microsoft)]{: .btn .fs-5 .mb-4 .mb-md-0 } 
 
