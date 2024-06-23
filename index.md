@@ -11,8 +11,7 @@ nav_exclude: true
 New (v1.4)
 
 
-![new](/assets/new.png){: width="auto" height="auto" }
-
+![new](/assets/new.jpg)
 
 # Focusing on writing easy-to-read quality documentation 
 {: .fs-9 }

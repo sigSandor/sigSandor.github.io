@@ -14,7 +14,7 @@ nav_exclude: false
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 2 - pfSense initial Setup & Configuration</span>
 
-![banner](/assets/banner.png){: width="auto" height="auto" }
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### Posted ***May 22, 2024***
 

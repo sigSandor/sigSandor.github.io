@@ -13,7 +13,7 @@ nav_exclude: false
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 3 - Kali Linux setup</span>
 
-![banner](/assets/banner.png){: width="auto" height="auto" }
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### Posted ***June 16, 2024***
 

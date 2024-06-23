@@ -11,7 +11,7 @@ nav_exclude: false
 
 ### <span style="color: pink; font-weight: bold;">Part 5 - Cyber Range setup</span>
 
-![banner](/assets/banner.png){: width="auto" height="auto" }
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### in progress ***June 17, 2024***
 
