@@ -3,14 +3,16 @@ layout: post
 title: "KQL basics"
 categories: Security
 nav_exclude: false
+nav_order: 3
 ---
 
 {: .text-center }
 # Kusto Query Language 101
 
 {: .text-center }
-### <span style="color: orange; font-weight: bold;">Basics for Beginners</span>
+## <span style="color: orange; font-weight: bold;">Basics for Beginners</span>
 
+![kql1](/assets/kql1.jpg){: width="auto" height="auto" }
 
 ###### IN PROGRESS ***June 18, 2024***
 
@@ -47,7 +49,7 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 
 > 
 
-> ![law1.png](/assets/law1.png){: width="auto" height="auto" }
+> ![law1.png](/assets/law1.jpg){: width="auto" height="auto" }
 
 ----
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Networking Protocols"
+title: "Networking 101" 
 categories: Networking
 has_children: true
 nav_order: 1
@@ -8,94 +8,37 @@ nav_exclude: false
 ---
 
 {: .text-center }
-# Kusto Query Language 101
+# Networking 101
 
 {: .text-center }
-### <span style="color: orange; font-weight: bold;">Basics for Beginners</span>
+## <span style="color: orange; font-weight: bold;">Computer Networks</span>
+
+![netw1](/assets/netw1.jpg){: width="auto" height="auto" }
+
+###### Posted ***June 24, 2024***
 
 
-###### IN PROGRESS ***June 18, 2024***
-
-- KQL is Cloud native, and designed to query large data sets.
-
-- WORM language (Write Once Read Many)
-
-> These 2 links will show you how to set up a free Azure Data Explorer to test the upcoming Query basics.
+##  <span style="color: lightpink; font-weight: bold;">What do we mean by "Network"?</span>
 
 
-```scss
-https://kusto.azure.com/publicfreecluster
-```
+- A `network` is a group of interconnected computing devices or nodes, that exchange data and resources together. Most notably, they share an internet connection. This can be within a complicated `subnetted` network, which is a *network inside of a network*, or simply a home network with common things like **smartphones**, **laptops**, **printers**, **smart devices**, **TV's** and **other devices**.
 
-```scss
-https://www.youtube.com/watch?v=8JqwHaIW_Zc
-```
+### Subnet? whats that?
 
+- a `Subnet` is a smaller contained network within a larger network.
+- one of the most common examples is a office enviroment with many floors and departments. If this is a production enviroment, a PLC or Manufacturing device would likely (and hopefully) be on a different network from a printer or laptop. 
 
-A record will run horizontally, Marked in the red boxes. 
+### Why is seperating devices so important? 
 
-Fields will run vertically, marked in blue.
+- When we look at at the reason for a subnet, partially it is to divide a network into smaller, more efficient networks.
 
-> Within that database, I queried `Products` and then sampled the top 10 results with `take`.
+- Another reason could be to seperate physical areas and regions such as a engineering department, sales group, 1st, 2nd, 3rd floor, and so on.
 
-![adx2.png](/assets/adx2.png){: width="auto" height="auto" }
+## DMZ
 
+- a `DMZ` or de-militarized zone, is a subnet or `sub-network` that seperates a `LAN` Local area network, from untrusted networks or devices. 
 
-## LAW (Log Analytic Workspace)
+- Usually a DMZ will face outwards, protecting the business enviroment and LANs. 
 
-- Purpose: Part of Azure Monitor, it is specifically focused on collecting, analyzing, and querying log and telemetry data from Azure services, on-premises environments, and other cloud environments. It's geared towards IT operational intelligence, monitoring, and troubleshooting.
-
-- Query Language: Also uses Kusto Query Language `KQL`
-
-- Data Types: Primarily focused on logs and telemetry data for the purpose of monitoring, diagnostics, and troubleshooting of IT infrastructure and applications.
-
-- Performance: Optimized for operational data analysis. While it can handle large volumes of data, the primary focus is on providing insights for IT operations and monitoring.
-
-- Use Cases: Ideal for infrastructure monitoring, application performance monitoring, security information and event management (SIEM), and compliance tracking.
-
-----
-
-## ADX (Azure Data Explorer)
-
-- Purpose: ADX is a big data analytics platform optimized for interactive queries on large volumes of data. It's designed to analyze, visualize, and explore data from various applications, websites, IoT devices, and more.
-
-- Query Language: Uses Kusto Query Language `KQL`
-
-- Data Types: While it can handle logs, it's also designed to work with a wider variety of data types, including metrics, time-series data, and telemetry from various sources.
-
-- Performance: ADX is highly optimized for performance, being able to query millions if not billions of records in an instant.
-
-- Use Cases: Ideal for real-time analytics, IoT applications, telemetry data, customer and operational analytics, and scenarios requiring fast analysis of large datasets.
-
-----
-
-# Operators:
-
-
-### where: Filters a table to the subset of rows that satisfy a predicate.
-- the `where` and `filter` statements are equivalent in KQL
-
-### pipe: 
-
-### and: 
-
-###
-
-###
-
-###
-
-###
-
-###
-
-###
-
-###
-
-###
-
-###
-
-###
+## Firewalls
 
