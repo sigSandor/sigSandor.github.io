@@ -10,10 +10,10 @@ nav_exclude: false
 {: .text-center }
 # Networking 101
 
-{: .text-center }
-## <span style="color: orange; font-weight: bold;">Computer Networks</span>
-
 ![netw1](/assets/netw1.jpg){: width="auto" height="auto" }
+
+{: .text-center }
+## <span style="color: orange; font-weight: bold;">Network Terminology</span>
 
 ###### Posted ***June 24, 2024***
 

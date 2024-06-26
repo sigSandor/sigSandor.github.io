@@ -10,10 +10,10 @@ nav_exclude: false
 {: .text-center }
 # Network & Security Home Lab: 
 
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
+
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 3 - Kali Linux setup</span>
-
-![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### Posted ***June 16, 2024***
 

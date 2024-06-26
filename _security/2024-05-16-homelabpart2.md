@@ -11,10 +11,10 @@ nav_exclude: false
 {: .text-center }
 # Network & Security Home Lab: 
 
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
+
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 2 - pfSense initial Setup & Configuration</span>
-
-![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### Posted ***May 22, 2024***
 

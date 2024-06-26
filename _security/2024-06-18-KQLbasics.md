@@ -9,10 +9,11 @@ nav_order: 3
 {: .text-center }
 # Kusto Query Language 101
 
-{: .text-center }
-## <span style="color: orange; font-weight: bold;">Basics for Beginners</span>
 
 ![kql1](/assets/kql1.jpg){: width="auto" height="auto" }
+
+{: .text-center }
+## <span style="color: orange; font-weight: bold;">Basics for Beginners</span>
 
 ###### IN PROGRESS ***June 18, 2024***
 

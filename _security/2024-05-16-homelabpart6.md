@@ -10,9 +10,10 @@ nav_exclude: true
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 6 - Active Directory Setup</span>
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
-###### Posted ***May 15, 2024***
+### <span style="color: pink; font-weight: bold;">Part 6 - Active Directory Setup</span>
+
+###### Posted ***June, 2024***
 

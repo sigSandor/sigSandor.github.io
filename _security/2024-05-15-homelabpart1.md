@@ -10,11 +10,10 @@ nav_exclude: false
 {: .text-center }
 # Network & Security Home Lab: 
 
+![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 1 - Introduction</span>
-
-![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 ###### Posted ***May 20, 2024***
 This guide was inspired by David Varghese's [blog] post.

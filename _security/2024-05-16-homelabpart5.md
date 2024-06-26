@@ -9,9 +9,9 @@ nav_exclude: false
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 5 - Cyber Range setup</span>
-
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
+
+### <span style="color: pink; font-weight: bold;">Part 5 - Cyber Range setup</span>
 
 ###### in progress ***June 24, 2024***
 

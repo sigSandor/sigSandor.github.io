@@ -10,9 +10,9 @@ nav_exclude: true
 
 ## Network & Security Home Lab: 
 
-### <span style="color: pink; font-weight: bold;">Part 7 - Malware Analysis Lab Setup</span>
-
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
-###### Posted ***May 15, 2024***
+### <span style="color: pink; font-weight: bold;">Part 7 - Malware Analysis Lab Setup</span>
+
+###### Posted ***june, 2024***
 
