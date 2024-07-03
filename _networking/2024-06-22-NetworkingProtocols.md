@@ -15,7 +15,7 @@ nav_exclude: false
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Network Terminology</span>
 
-###### Posted ***June 24, 2024***
+###### In progress ***June 24, 2024***
 
 
 ##  <span style="color: lightpink; font-weight: bold;">What do we mean by "Network"?</span>
