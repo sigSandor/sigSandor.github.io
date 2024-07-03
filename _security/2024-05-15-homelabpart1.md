@@ -22,7 +22,7 @@ The following guide will not be easy or short, it will be catering to entry leve
 
 ----
 
-## Item Overview
+## <span style="color: royalblue; font-weight: bold;">Item Overview</span>
 
 - PFsense (Firewall&Router)
 - Active Directory Lab( Domain Controller & 3 clients)
@@ -31,7 +31,7 @@ The following guide will not be easy or short, it will be catering to entry leve
 - Malware Analysis Lab (Windows & Linux)
 - Kali & Parrot linux
 
-## System Recommended Requirements
+##  <span style="color: royalblue; font-weight: bold;">Recommended Requirements</span> 
 - Windows 7 or 10 host OS
 - 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support
 - 16GB RAM

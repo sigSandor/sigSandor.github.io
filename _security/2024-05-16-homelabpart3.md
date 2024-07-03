@@ -22,7 +22,7 @@ In this module, we are going to install Kali Linux. This VM will be used for red
 
 We will use this VM in the next module also to complete the pfSense final setup.
 
-## Download Kali Linux
+## <span style="color: royalblue; font-weight: bold;">Download Kali Linux</span>
 
 Go to the following link: `Download` > [Kali linux] 
 
@@ -35,7 +35,7 @@ Download the 64-bit Recommended Installer. The image is around 4GB in size so it
 Once it is downloaded we should have an `.iso` file.
 Move this file to the folder where the pfSense iso was also stored.
 
-## Kali Linux VM Creation
+## <span style="color: royalblue; font-weight: bold;">Kali Linux VM Creation</span>
 
 > Open VirtualBox. 
 
@@ -67,7 +67,7 @@ Ensure that all the settings look right and click on Finish.
 
 ![vbox45.png](/assets/vbox45.png){: width="auto" height="auto" }
 
-## Adding VM to Group
+## Adding VM to Group <span style="color: royalblue; font-weight: bold;"> </span>
 
 > Right-click on the Kali Linux VM from the sidebar, select Move to Group -> `New`.
 
@@ -83,11 +83,11 @@ Double check, now we should have the following structure:
 
 ![vbox46.png](/assets/vbox46.png){: width="auto" height="auto" }
 
-# Kali Linux VM Configuration
+# <span style="color: royalblue; font-weight: bold;">Kali Linux VM Configuration</span>
 
 Select the Kali Linux VM and then from the toolbar select Settings.
 
-## System Configuration
+## <span style="color: royalblue; font-weight: bold;">System Configuration</span>
 
 Go to `System` -> `Motherboard`. For the Boot Order option ensure that the `Hard Disk` is on the top followed by `Optical`. 
 
@@ -95,7 +95,7 @@ Go to `System` -> `Motherboard`. For the Boot Order option ensure that the `Hard
 
 ![vbox47.png](/assets/vbox47.png){: width="auto" height="auto" }
 
-## Boot Image Configuration
+##<span style="color: royalblue; font-weight: bold;">Boot Image Configuration </span>
 
 > Go to the `Storage` tab.
 Select the Empty disk present below `Controller: IDE` then click on the small disk icon on the right side of the Optical Drive option.
@@ -109,7 +109,7 @@ The final result should look as follows:
 
 ![vbox49.png](/assets/vbox49.png){: width="auto" height="auto" }
 
-## Network Configuration
+## <span style="color: royalblue; font-weight: bold;">Network Configuration</span>
 
 Go to `Network -> Adapter 1`. For the Attached to field select `Internal Network`. For Name select `LAN 0`. Expand the 
 *Advanced* section. For *Adapter Type* select `Paravirtualized Network (virtio-net)`.
@@ -117,7 +117,7 @@ Go to `Network -> Adapter 1`. For the Attached to field select `Internal Network
 ![vbox50.png](/assets/vbox50.png){: width="auto" height="auto" }
 
 
-## Kali Linux Installation
+## <span style="color: royalblue; font-weight: bold;">Kali Linux Installation</span>
 
 ***Remember to boot the pfSense VM first, before starting the Kali Linux installation.***
 
@@ -164,7 +164,7 @@ If you often forget your passwords, you can stop the installation at this point 
  
 You can do so by right clicking on your (closed) VM and clicking clone. Or alternatively CNTL + O
 
-### Username and Password
+### <span style="color: royalblue; font-weight: bold;">Username and Password</span>
 
 The username is used to create the home directory for the user. All the user-related configurations are stored in this folder.
 
@@ -174,7 +174,8 @@ Enter a strong password. Re-enter the password in the second field and click on 
 
 ![vbox59.png](/assets/vbox59.png){: width="auto" height="auto" }
 
-# Final steps
+# <span style="color: royalblue; font-weight: bold;">Final steps</span>
+
 
 Select your `clock` and then click on `Continue` (Default is Central or Eastern).
 
@@ -204,7 +205,7 @@ Select `Yes` to write changes to the disk, then click on `Continue`.
 </details>
 
 
-## Desktop Enviroment
+## <span style="color: royalblue; font-weight: bold;">Desktop Enviroment</span>
 
 After the base system installation completes, we ahve to choose the desktop environment that will be installed. I have selected GNOME for installation. David Varghese also suggests this choice, as KDE is a bit more resource heavy and XFCE is default. You can make a personal choice here, but I like GNOME desktop enviroment.
 
@@ -226,7 +227,7 @@ Click on `Continue` to Reboot the system.
 
 After reboot, we should see the Login screen. Once you enter your created password, Click `Enter` to log in. 
 
-###   Post-Installation Configuration
+### <span style="color: royalblue; font-weight: bold;">Post-Installation Configuration </span>
 
 Kali Linux installer can detect when it is run from a VM because of this it automatically installs Guest Addons.
 
@@ -254,7 +255,7 @@ The `.iso` file that was downloaded to create the VM can be deleted now if you d
 
 In the next module, we will access the pfSense Web UI and complete the remaining configuration.
 
-Part 4 - pfSense Firewall Configuration
+<span style="color: royalblue; font-weight: bold;">Part 4 - pfSense Firewall Configuration</span>
 
 
 

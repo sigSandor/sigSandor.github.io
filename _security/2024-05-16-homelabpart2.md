@@ -29,7 +29,7 @@ pfSense is going to be the default gateway and firewall for our home lab.
 This means that pfSense should be the first VM that is booted. 
 Once pfSense is launched other VMs in the lab can be launched following.
 
-## Downloading pfSense
+## <span style="color: royalblue; font-weight: bold;">Downloading pfSense</span>
 
 Go to the page : `pfSense Community Edition` > [Download] 
 
@@ -40,7 +40,7 @@ Account setup is *free*, but will require some self navigation to access the dow
 
 ![vbox18.png](/assets/vbox18.png){: width="auto" height="auto" }
 
-### Select an option with the following:
+### <span style="color: royalblue; font-weight: bold;">Select an option with the following:</span>
 
 > Architecture: `AMD64 (64-bit)`
 
@@ -60,7 +60,7 @@ After extraction, we should have a file that has the `.iso` extension.
 ![vbox19.png](/assets/vbox19.png){: width="auto" height="auto" }
 
 
-## pfSense VM Creation
+## <span style="color: royalblue; font-weight: bold;">pfSense VM Creation</span>
 
 Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 
@@ -84,14 +84,14 @@ On the next page, we can choose the amount of storage space to reserve for the V
 ![vbox5](/assets/vbox5.png){: width="auto" height="auto" }
 
 
-## Final Confirmation
+## <span style="color: royalblue; font-weight: bold;">Final Confirmation</span>
 
 ![vbox6](/assets/vbox6.png){: width="auto" height="auto" }
  > Confirm that everything looks right and then click on `Finish`.
  > Once done we should see the newly created VM in the sidebar.
  
 
-## Grouping our First VM
+## <span style="color: royalblue; font-weight: bold;">Grouping our First VM</span>
 
 I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing organization since we are dealing with a large number of virtual machines.
 
@@ -105,13 +105,13 @@ The final result should match the following:
 
 ![vbox7](/assets/vbox7.png){: width="auto" height="auto" }
 
-## pfSense Basic Virtual Configuration
+## <span style="color: royalblue; font-weight: bold;">pfSense Basic Virtual Configuration</span>
 
 Before we boot the VM we need to configure some settings related to VirtualBox. Select the pfSense VM from the sidebar and then click on `Settings`.
 
 ![vbox20.png](/assets/vbox20.png){: width="auto" height="auto" }
 
-## System Configuration
+## <span style="color: royalblue; font-weight: bold;">System Configuration</span>
 
 Select `System -> Motherboard` in the Boot Order section use the arrows to move `the Hard Disk` to the top, `Optical` should be next. Ensure that `Floppy` is unchecked.
 
@@ -120,14 +120,14 @@ Select `System -> Motherboard` in the Boot Order section use the arrows to move 
 {: .warning }
 You may have to drag the top of the window *upwards* in order to hit the next button.
 
-### Audio & USB Configuration
+### <span style="color: royalblue; font-weight: bold;">Audio & USB Configuration</span>
 
 > Go to the Audio tab and disable Audio option. Since the VM we are configuring is a router we will not be using audio. (optional)
 
 
 > Go to the USB tab and uncheck the Enable USB Controller option. Since this VM we are configuring is a router we will not need USB support. (optional)
 
-## Network Configuration
+## <span style="color: royalblue; font-weight: bold;">Network Configuration</span>
 
 Go to `Network -> Adapter 1`. For the Attached to field select `NAT`. Expand the `Advanced` section and for Adaptor Type select `Paravirtualized Network (virtio-net)`.
 
@@ -152,14 +152,14 @@ Select `Adapter 4`. Tick the Enable Network Adapter option. For the Attached to 
 
 Once done click on `OK` to save the changes and close the configuration menu.
 
-## VirtualBox Network Settings: All You Need to Know 
+## <span style="color: royalblue; font-weight: bold;">VirtualBox Network Settings</span>
 
 {: .warning }
 VirtualBox by defualt only allows us to configure 4 interfaces using the UI. Towards the end of the guide we will see how to add more interfaces using VirtualBox Command line interface.
 
 Additionally, you can find a [Virtualbox Network Settings Guide] here.
 
-## pfSense Installation
+## <span style="color: royalblue; font-weight: bold;">pfSense Installation</span>
 
 Essentially, the installation process will be hitting quite a few times.
 
@@ -201,7 +201,7 @@ Wait for the installation to complete.
 Press Enter to Reboot the VM.
 
 
-## pfSense Configuration
+## <span style="color: royalblue; font-weight: bold;">pfSense Configuration </span>
 
 Once pfSense reboots, the first priority is to configure the adapters we created in the VirtualBox settings.
 
@@ -241,7 +241,7 @@ We will have to assign static IPv4 addresses to the `LAN`, `OPT1` and `OPT2` int
 {: .warning }
 The IP address of the `WAN` interface can be different in your case since it is assignment randomly by the VirtualBox DHCP server.
 
-## Configuring LAN (vtnet1)
+## <span style="color: royalblue; font-weight: bold;">Configuring LAN (vtnet1)</span>
 
 > Enter `2` to select “Set interface(s) IP address”. 
 
@@ -286,7 +286,7 @@ pfSense will use the inputs we provided and automatically configure the interfac
 
 ![vbox36.png](/assets/vbox36.png){: width="auto" height="auto" }
 
-## Configuring OPT1 (vtnet2)
+## <span style="color: royalblue; font-weight: bold;">Configuring OPT1 (vtnet2)</span>
 
 Enter `2` to select “Set interface(s) IP address”. Enter `3` this time in order to select the `OPT1` interface.
 
@@ -318,7 +318,7 @@ Do you want to revert to HTTP as the webConfigurator protocol?: `n`
 
 Press `Enter` to save the changes and return to the main menu.
 
-## Configuring OPT2 (vtnet3)
+## <span style="color: royalblue; font-weight: bold;">Configuring OPT1 (vtnet3)</span>
 
 Enter `2` to select “Set interface(s) IP address”. Enter `4` to select the `OPT2` interface.
 
@@ -350,7 +350,7 @@ Do you want to revert to HTTP as the webConfigurator protocol?: `n`
 
 ![vbox39.png](/assets/vbox39.png){: width="auto" height="auto" }
 
-## Final Checks!
+## <span style="color: royalblue; font-weight: bold;">Final Checks!</span>
 
 Press `Enter` to save the changes and return to the main menu.
 
@@ -363,7 +363,7 @@ Once confirmed, we have completed the configuration of the interfaces for our pf
 {: .warning }
 pfSense Web Interface can be accessible for all the `LAN` interfaces in our `LAN`!
 
-## Shutdown pfSense
+## <span style="color: royalblue; font-weight: bold;">Shutdown pfSense</span>
 
 When we start the lab pfSense is the first VM that has to be booted. When we shut down the lab pfSense will be the ***last*** VM that is stopped.
 
@@ -375,7 +375,7 @@ Do you want to process?: `y`
 
 This will initiate the shutdown sequence.
 
-## Post-Installation Cleanup
+## <span style="color: royalblue; font-weight: bold;">Post-Installation Cleanup</span>
 
 After the VM is shut down. Click on Settings from the toolbar.
 
@@ -388,7 +388,7 @@ The .iso file along with the .iso.gz file that was downloaded to create the VM c
 
 In the next module, we will set up `Kali Linux` on the `LAN` interface. This VM will be used to configure and manage pfSense. It will also be used as the attack VM to target the vulnerable systems on the `OPT1` (CYBER_RANGE).
 
-Next part - Kali Linux Setup
+<span style="color: royalblue; font-weight: bold;">Next part - Kali Linux Setup</span>
 
 [Download]: https://www.pfsense.org/download/
 [Virtualbox Network Settings Guide]: https://www.nakivo.com/blog/virtualbox-network-setting-guide/
