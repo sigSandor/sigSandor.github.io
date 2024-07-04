@@ -13,7 +13,7 @@ New (v1.4)
 
 ![new](/assets/new.jpg)
 
-# Focusing on writing easy-to-read quality documentation 
+# <span style="color: royalblue; font-weight: bold;"> Focusing on writing easy-to-read quality documentation</span>
 {: .fs-9 }
 
 
@@ -32,7 +32,7 @@ Welcome to my website and cybersecurity blog. It is a valuable resource that pro
 
 ----
 
-### CyberSec news feed: 
+### <span style="color: royalblue; font-weight: bold;">CyberSec news feed:</span>
 
 [Threatable.io]{: .btn .fs-5 .mb-4 .mb-md-0 }
 [Bleeping computer]{: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -56,7 +56,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 ----
 
-Donations (monero): 
+<span style="color: royalblue; font-weight: bold;">Donations (monero):</span>
 46zGLPpMGNtZPk8VmWvuHDVWUbHyRB6CDCcY7WyiEQMRP1UZDrv9Crta27FZqtPqDABDoXHog15Ej77BhojNxbAu2xDzaee
 
 ![donations](/assets/donations.jpg)
