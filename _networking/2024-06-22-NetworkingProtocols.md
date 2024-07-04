@@ -18,7 +18,7 @@ nav_exclude: false
 ###### In progress ***June 24, 2024***
 
 
-##  <span style="color: lightpink; font-weight: bold;">What do we mean by "Network"?</span>
+##  <span style="color: royalblue; font-weight: bold;">What do we mean by "Network"?</span>
 
 
 - A `network` is a group of interconnected computing devices or nodes, that exchange data and resources together. Most notably, they share an internet connection. This can be within a complicated `subnetted` network, which is a *network inside of a network*, or simply a home network with common things like **smartphones**, **laptops**, **printers**, **smart devices**, **TV's** and **other devices**.

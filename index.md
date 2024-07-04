@@ -54,6 +54,13 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+----
+
+Donations (monero): 
+46zGLPpMGNtZPk8VmWvuHDVWUbHyRB6CDCcY7WyiEQMRP1UZDrv9Crta27FZqtPqDABDoXHog15Ej77BhojNxbAu2xDzaee
+
+![donations](/assets/donations.jpg)
+
 ---
 
 
