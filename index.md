@@ -17,7 +17,7 @@ New (v1.4)
 {: .fs-9 }
 
 
-Welcome to my website and cybersecurity blog. It is a valuable resource that provides insight into cybersecurity terms and knowledge, write ups (coming 2024), and much more. This website can be an awesome tool for reference, searching, and quick access to other resources. While I have pride in my skills to write, I included many cheatsheets and external links for those who prefer a more refined experience. Please enjoy. -Alex
+Welcome to my website and cybersecurity blog. It's a valuable resource for myself, that provides a study of cybersecurity fundamentals, IT knowledge, CTF write ups (coming 2024), and much more. This website can be an awesome tool for anyone to reference, search, and have quick access to other resources. While I do have pride to write my own content, I pull inspiration and guidance from many resources, and my understanding is always changing. This means that this website is very much a living document, and also includes many external resourses/refrences and links to cheatsheets for those who prefer a more refined and defined experience. Please enjoy. -Alex
 
 {: .warning }
  Please allow up to *2-3 weeks for changes to apply on Github. 
