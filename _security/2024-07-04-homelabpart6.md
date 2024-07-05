@@ -34,14 +34,16 @@ Microsoft provided Evaluation copies for both of them. Windows Server 2019 has a
 
     We can create an Active Directory Lab using a single client as well but there are certain AD attacks that require two clients to perform. Depending on your use case you may skip the setup of the second 2nd client.
 
-Downloading Windows ISO Files
-Windows Server 2019
+## <span style="color: royalblue; font-weight: bold;">Downloading Windows ISO Files</span>
+
+
+### Windows Server 2019
 
 Go to the following URL: Windows Server 2019 | Microsoft Evaluation Center
 
 Click on the 64-bit edition download. The ISO file is ~5GB.
 
-Windows 10 Enterprise
+### Windows 10 Enterprise
 
 Go to the following URL: Windows 10 Enterprise | Microsoft Evaluation Center
 
@@ -57,8 +59,10 @@ ISO Name	OS Name
 
     The build number maybe different when you download the images. These are the latest versions that are available as for writing of this module (Dec, 2023).
 
-Creating the VMs
-Windows Server 2019
+### <span style="color: royalblue; font-weight: bold;">Creating the VMs</span>
+
+
+### Windows Server 2019
 
 Click on Tools from the VirtualBox sidebar and select New.
 
@@ -80,7 +84,7 @@ Right-click on the group name (Active Directory) and choose Move to Group -> Hom
 
 The final output should look as follows:
 
-Windows 10 Enterprise VM1
+## <span style="color: royalblue; font-weight: bold;">Windows 10 Enterprise VM1</span>
 
 From the VirtualBox sidebar select Tools and then click on New.
 
@@ -92,20 +96,21 @@ Increase the Hard Disk size to 100GB and then click on Next.
 
 Verify that all the options are correct and then click on Finish.
 
-Adding VM to Group
+### <span style="color: royalblue; font-weight: bold;">Adding VM to Group</span>
 
 Right-click on the VM and then choose Move to Group -> Home Lab/Active Directory.
 
 The final result should match the following:
 
-Windows 10 Enterprise VM2
+## <span style="color: royalblue; font-weight: bold;">Windows 10 Enterprise VM2</span>
 
 Follow the same steps as above to create the VM for the second AD user.
 
-Adding VM to Group
+### <span style="color: royalblue; font-weight: bold;">Adding VM to Group</span>
 
-Configuring the VMs
-Windows Server 2019
+## <span style="color: royalblue; font-weight: bold;">Configuring the VMs</span>
+
+### Windows Server 2019
 
 Select the Windows Server 2019 VM and click on Settings from the toolbar.
 
@@ -113,7 +118,7 @@ Go to System -> Motherboard. For Boot Order ensure Hard Disk is not the top foll
 
 Go to Network -> Adapter 1. For the Attacked to field select Internal Network. For name select LAN 2. Click on OK to save the settings.
 
-Windows 10 Enterprise VM1
+### <span style="color: royalblue; font-weight: bold;">Windows 10 Enterprise VM1</span>
 
 Select Windows 10 Enterprise VM1 from the sidebar and then from the toolbar choose Settings.
 
@@ -121,12 +126,14 @@ Go to System -> Motherboard. For Boot Order ensure Hard Disk is on the top follo
 
 Go to Network -> Adapter 1. For the Attacked to field select Internal Network. For name select LAN 2. Click on OK to save the settings.
 
-Windows 10 Enterprise VM2
+### <span style="color: royalblue; font-weight: bold;">Windows 10 Enterprise VM2</span>
 
 Follow the same steps as above to change the settings for the AD User 2 VM.
 
-Windows Server 2019 Setup
-OS Installation
+## <span style="color: royalblue; font-weight: bold;">Windows Server 2019 Setup</span>
+
+
+### OS Installation
 
 Select Windows Server 2019 from the sidebar and click on Start from the toolbar.
 
@@ -144,7 +151,7 @@ Select Disk 0 and click on Next.
 
 The VM will restart a couple of times during the installation process.
 
-OS Setup & Configuration
+### OS Setup & Configuration
 
 Once the installation is complete we will be asked to set the password for the Administrator account. Once set click on Finish.
 
@@ -158,7 +165,7 @@ Select Input -> Virtual Machine. If we scroll down we should see that Ctrl+Alt+D
 
 Once we log in. Server Manager will automatically open. A popup will also open asking us to try Windows Admin Center. Click on Don't show this message again and then click on X to close the popup.
 
-Guest Additions Installation
+### Guest Additions Installation
 
 To make the VM screen size bigger we need to install Guest Additions. From the VM toolbar click on Devices -> Optical Devices -> Remove disk from virtual drive. This will remove the Windows Server 2019 image from the disk drive.
 
@@ -177,7 +184,8 @@ Choose Reboot now and click on Finish. The VM will restart automatically.
 After restart, log into the system. From the VM toolbar click on Devices -> Optical Drivers -> Remove disk from virtual drive to remove the Guest Additions image.
 
 Use the shortcut Right Ctrl+F to enter Fullscreen mode. The VM will automatically scale to fill the entire screen. Use the same shortcut to exit Fullscreen mode.
-Network Configuration
+
+## <span style="color: royalblue; font-weight: bold;">Network Configuration</span>
 
 During the pfSense setup module (Part 2) we disabled DHCP on the AD_LAB interface because of this our VM will not be automatically assigned an IP address. From the taskbar right-click on the network icon and select Open Network & Internet settings.
 
@@ -208,7 +216,7 @@ Click on About on the sidebar and then click on the “Rename this PC” button.
 
 Click on “Restart now” for the changes to take effect.
 
-Active Directory & DNS Installation
+## <span style="color: royalblue; font-weight: bold;">Active Directory & DNS Installation</span>
 
 After login wait for Server Manager to load. Click on the Manage button from the top right corner and select “Add Roles and Features”.
 
@@ -222,8 +230,9 @@ Once both the features are selected click on Next to proceed with installation.
 
 Click Next till you reach the Confirmation page. Here click on Install to start the installation of the selected features.
 
-Once the installation is complete click on Close to exit the Wizard.
-Active Directory Configuration
+Once the installation is complete click on Close to exit the Wizard.\
+
+## <span style="color: royalblue; font-weight: bold;">Active Directory Configuration</span>
 
 Click on the Flag icon present in the top right of the toolbar in Server Manager. From the dropdown click on “Promote this server to a domain controller”.
 
@@ -247,7 +256,7 @@ Once the install process is complete the machine will need to restart. Click on 
 
 On restart, you will notice that the name that is shown on the login page has changed. The first part of the domain name is prepended to the username. This means the machine has successfully been configured as the domain controller. Log in using the Administrator password.
 
-DNS Configuration
+### <span style="color: royalblue; font-weight: bold;">DNS Configuration</span>
 
 Since we enabled DNS on this machine (Domain Controller). This machine (DC) will act as the DNS server for devices that are connected to the ad.lab environment. For the DNS service to function properly we need to configure a Forwarder. Forwarder is the device to which the DNS queries will be sent when the DC cannot resolve it. In our case, we need to forward the request to pfSense. The DNS service of pfSense will then perform the lookup.
 
@@ -263,7 +272,7 @@ Once added. Click on OK to confirm the change.
 
 Click on Apply then OK to save the changes.
 
-DHCP Installation
+### <span style="color: royalblue; font-weight: bold;">DHCP Installation</span>
 
 Since DHCP is disabled on the AD_LAB interface when new devices are added they will not be assigned an IP address. We will enable the DHCP service on the DC. Once set devices that connect to the AD_LAB network will be automatically assigned an IP address by the Domain Controller DHCP server.
 
@@ -273,7 +282,7 @@ Keep clicking Next till you reach the “Server Roles” page. Enable “DHCP Se
 
 Keep clicking Next till you reach the Confirmation page. Click Install to enable DHCP.
 
-DHCP Configuration
+### <span style="color: royalblue; font-weight: bold;">DHCP Configuration</span>
 
 After the installation is complete click on the Flag present in the toolbar of Server Manager and click on “Complete DHCP configuration”.
 
@@ -316,4 +325,4 @@ Select “Yes, I want to activate this scope now” and click on Next.
 
 So far we have installed Windows Server 2019, installed Guest Additions, configured the VM to be the Domain Controller (DC), set up a DNS Forwarder and configured DHCP. We still need to create users in the DC and set up client machines to use the AD environment. We will cover these topics in part 2 of this module.
 
-Part 7 - Active Directory Lab Setup - Part 2
+<span style="color: royalblue; font-weight: bold;">Part 7 - Active Directory Lab Setup - Part 2</span> 

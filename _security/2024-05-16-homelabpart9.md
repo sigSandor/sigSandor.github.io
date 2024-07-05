@@ -17,20 +17,14 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 9 - Tsurugi Linux (DFIR) Setup
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Feb 2, 2024
-Preview Image
-By David Varghese
-8 min read
-
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
+A step-by-step guide for building your very own Cybersecurity Home Lab
 
 In this module, we are going to set up Tsurugi Linux which is an OS that comes pre-configured with many of the commonly used Digital Forensics & Incident Response tools. Before deploying the VM we will create a new Interface in pfSense called Security that will have our DFIR VM and in the future other security tools.
 Creating New Interface
 
 As discussed in the last module using VirtualBox GUI we cannot create more than 4 interfaces but using the CLI we can create up to 8 Interfaces.
-Creating new Interface
+
+## <span style="color: royalblue; font-weight: bold;">Creating new Interface</span>
 
 Before creating the interface we need the name of the pfSense VM. In my case, the VM is called “pfSense”. Also, ensure the VM is “Powered Off” before running the commands.
 
@@ -55,7 +49,7 @@ VBoxManage modifyvm "pfSense" --cableconnected6 on
 
 The pfSense VM will now have an Adapter 6.
 
-Enabling the Interface
+### Enabling the Interface
 
 Start the pfSense VM. pfSense will not detect the new interface. We need to onboard the interface before it shows up.
 
@@ -90,7 +84,7 @@ Do you want to revert to HTTP as the webConfigurator protocol?: n
 
 Now interface OPT4 will have an IP address.
 
-Renaming the Interface
+### Renaming the Interface
 
 Launch the Kali Linux VM. Login to the pfSense web portal. From the navigation bar select Interfaces -> OPT4.
 
@@ -98,7 +92,7 @@ In the description field enter SECURITY. Scroll to the bottom and click on Save.
 
 Click on Apply Changes in the popup that appears to persist the changes.
 
-Interface Firewall Configuration
+### Interface Firewall Configuration
 
 From the navigation bar click on Firewall -> Rules.
 
@@ -140,15 +134,17 @@ In the popup click on Apply Changes to persist the new rule.
 
 The final result will be as follows:
 
-Reboot pfSense
+## <span style="color: royalblue; font-weight: bold;">Reboot pfSense</span>
 
 Now we need to restart pfSense to ensure that the firewall rules are propagated properly. From the navigation bar select Diagnostics -> Reboot.
 
 Click on Submit.
 
 Once pfSense boots up you will be redirected to the login page.
-Tsurugi Linux Setup
-Download Image
+
+## <span style="color: royalblue; font-weight: bold;">Tsurugi Linux Setup</span>
+
+### Download Image
 
 Go to the following URL: Tsurugi Linux - Downloads. Select one of the Mirror Links.
 
@@ -157,7 +153,7 @@ The ISO is ~16GB. It will take a while to download.
 
 After the download is complete we will have a .iso file.
 
-Creating the VM
+### Creating the VM
 
 Select Tools from the sidebar and then select New.
 
@@ -171,7 +167,7 @@ Increase the Hard Disk size to 150GB.
 
 Click if all the settings look right and then click on Finish.
 
-Adding VM to Group
+### Adding VM to Group
 
 Right-click on the VM name and then select “Move to Group” and then choose New.
 
@@ -181,7 +177,7 @@ Right-click on the group name, select “Move to Group” and then select “Hom
 
 The final result should match the following:
 
-Configuring the VM
+### Configuring the VM
 
 Select the VM and then from the toolbar select “Settings”.
 
@@ -189,7 +185,7 @@ Go to System -> Motherboard. In Boot Order ensure that Hard Disk is on top follo
 
 Go to Network -> Adapter 1. For the Attached to option select Internal Network. For name select LAN 4. Click on OK to save the changes.
 
-Installing Tsurugi Linux
+### Installing Tsurugi Linux
 
 Select the VM and from the toolbar select Start.
 
@@ -225,8 +221,9 @@ When the VM reboots you might get the following screen. VirtualBox should automa
 
 Login using the password that was configured.
 
-Post-Install Configuration
-Guest Additions Installation
+## <span style="color: royalblue; font-weight: bold;">Post-Install Configuration</span>
+
+### Guest Additions Installation
 
 Click on Devices -> Inert Guest Additions CD Image. This will insert the ISO image.
 
@@ -267,4 +264,4 @@ Use the Hamburger menu and click on Details to return to the main page.
 
 In the next module, we will install Ubuntu and then download and set up Splunk. We will also install the Splunk Universal Forwarder on the Domain Controller in our Active Directory Lab. This will allow us to capture the events that are generated on the Domain Controller.
 
-Part 10 - Splunk Setup & Configuration
+<span style="color: royalblue; font-weight: bold;">Part 10 - Splunk Setup & Configuration</span>

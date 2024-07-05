@@ -18,22 +18,18 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 8 - Malware Analysis Lab Setup
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Jan 26, 2024
-Preview Image
-By David Varghese
-13 min read
 
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
+
 
 In the module, we are going to set up the Malware Analysis Lab. This lab will consist of two VMs. One of the VMs will be for Windows Malware Analysis and the other one will be for Linux Malware Analysis.
-Creating New Interface
+
+## <span style="color: royalblue; font-weight: bold;">Creating New Interface</span>
 
 VirtualBox GUI does not allow us to create more than four Network Interfaces.
 
 However, we can configure up to 8 interfaces per VM. To add more than 4 interfaces we have to utilize the VirtualBox CLI.
-VirtualBox CLI Setup
+
+## <span style="color: royalblue; font-weight: bold;">VirtualBox CLI Setup</span>
 
 The VirtualBox CLI binary is called VBoxManage.exe.
 
@@ -80,7 +76,7 @@ Now if we look at the overview of the pfSense VM we should see Adapter 5.
 
     Interfaces that are created using the CLI will not show up in the Settings page for the VM. If you want to modify the adapter settings you have to do it using the CLI.
 
-Enabling the Interface
+###  <span style="color: royalblue; font-weight: bold;">Enabling the Interface</span>
 
 Start the pfSense VM. On boot, you will notice that there are still only 4 interfaces. The new interface has to be onboarded before it shows up in pfSense.
 
@@ -115,7 +111,7 @@ Do you want to revert to HTTP as the webConfigurator protocol?: n
 
 Now interface OPT3 will have an IP address.
 
-Renaming the Interface
+### <span style="color: royalblue; font-weight: bold;">Renaming the Interface</span>
 
 Launch the Kali Linux VM. Login to the pfSense web portal. From the navigation bar select Interfaces -> OPT3.
 
@@ -123,7 +119,7 @@ In the description field enter ISOLATED. Scroll to the bottom and click on Save.
 
 Click on Apply Changes in the popup that appears to persist the changes.
 
-Interface Firewall Configuration
+### <span style="color: royalblue; font-weight: bold;">Interface Firewall Configuration</span>
 
 From the navigation bar click on Firewall -> Rules.
 
@@ -142,23 +138,25 @@ In the popup click on Apply Changes to persist the new rule.
 
     Since this Interface is going to be used for Malware Analysis we are blocking network access. This will ensure that malware cannot spread to other systems using the network.
 
-Reboot pfSense
+### <span style="color: royalblue; font-weight: bold;">Reboot pfSense</span>
 
 Now we need to restart pfSense to ensure that the firewall rules are propagated properly. From the navigation bar select Diagnostics -> Reboot.
 
 Click on Submit.
 
 Once pfSense boots up you will be redirected to the login page.
-Flare VM Setup
+
+## <span style="color: royalblue; font-weight: bold;">Flare VM Setup</span>
 
 To install Flare we need a Windows machine. Flare can be set up using most versions of Windows. Since we already have the ISO for Windows 10 Enterprise I will be using it to configure Flare.
-Windows ISO Download
+
+### <span style="color: royalblue; font-weight: bold;">Windows ISO Download</span>
 
 Go to the following URL: Windows 10 Enterprise | Microsoft Evaluation Center
 
 Click on the 64-bit edition Enterprise ISO download option. The ISO file is ~5GB.
 
-Creating the VM
+### Creating the VM
 
 Select Tools from the sidebar and click on New.
 
@@ -180,7 +178,7 @@ Right-click on the “Malware Analysis” group and select Move to Group -> Home
 
 The final result should look as follows:
 
-Configuring the VM
+### <span style="color: royalblue; font-weight: bold;">Configuring the VM</span>
 
 Select the VM then from the toolbar select Settings.
 
@@ -191,7 +189,8 @@ Leave the Network Adatper on its default setting of NAT.
     Machines assigned to the ISOLATED interface does not have internet connection. But to setup Flare we need Internet access. Once we finish the configuring Flare we will move it to the correct subnet.
 
 Click on OK to save the settings.
-Installing Windows
+
+### <span style="color: royalblue; font-weight: bold;">Installing Windows</span>
 
 Select the Flare VM from the sidebar and click on Start.
 
@@ -202,13 +201,14 @@ Select “Domain join instead”.
     Provide a name that does not use special characters and spaces. This is very important. The installer for Flare will not work otherwise.
 
 Once on the desktop Windows will ask should access to the Internet be allowed click on Yes.
-Guest Additions Installation
+
+### <span style="color: royalblue; font-weight: bold;">Guest Additions Installation</span>
 
 Install Guest Additions to enable the resizing on the VM display. Once again you can refer to the last module (Part 7) for more detailed steps.
 
 After rebooting the VM. Remove the Guest Addition Image.
 
-Creating VM Snapshot 1
+### Creating VM Snapshot 1
 
 Before we proceed we are going to take a snapshot of the VM. Snapshots allow us to roll back to an old functional state of the VM.
 
@@ -219,13 +219,15 @@ Click on Take.
 Give the Snapshot a descriptive name. Click on OK to create the Snapshot.
 
 Click on the Hamburger menu and click on Details to return to the original page.
-Flare VM Pre-Install Configuration
+
+### Flare VM Pre-Install Configuration
 
 You can read more about Flare VM and its pre-requisites on the below link:
 mandiant/flare-vm: A collection of scripts to setup a reverse engineering environment
 
 TLDR; “Windows Updates” and “Windows Defender” have to be disabled.
-Disabling Windows Update
+
+#### Disabling Windows Update
 
 How to change account password on Windows 11 | Windows Central
 
@@ -235,7 +237,7 @@ Click on “Update & Security”.
 
 Click on the “Pause updates for 7 days” button.
 
-Disabling Windows Defender
+#### Disabling Windows Defender
 
 Download the following script: jeremybeaume/tools: Script to disable Windows Defender
 
@@ -281,7 +283,7 @@ Navigate to the Boot tab. From the Boot options section disable “Safe boot”.
 
 Wait for some time for Defender to load completely and then you will see that “Virus & threat protection” will show as disabled. This means that the script worked successfully.
 
-Renaming the VM
+### Renaming the VM
 
 Search for “This PC” and from the right side click on “Properties”.
 
@@ -289,14 +291,15 @@ Select “Rename this PC”.
 
 Give the PC a name. Click on Next and then select “Restart Now” for the changes to take effect.
 
-Creating VM Snapshot 2
+### Creating VM Snapshot 2
 
 Shut down the VM. Go to the Snapshot page using the Hamburger menu. Click on Take to create a new Snapshot.
 
 Give the Snapshot a descriptive name. Then click on OK.
 
 Use the Hamburger menu and return to the Details page. Click on Start to start the VM.
-Flare VM Installation
+
+## <span style="color: royalblue; font-weight: bold;">Flare VM Installation</span>
 
 Right-click on the Start menu and select “Windows PowerShell (Admin)”.
 
@@ -327,8 +330,9 @@ The installation can take a very long time. Once the setup is complete we will g
 
 After the installation is complete. Restart the VM to complete the setup.
 
-Post-Install Configuration
-Installing OpenSSH Server
+## <span style="color: royalblue; font-weight: bold;">Post-Install Configuration</span>
+
+### Installing OpenSSH Server
 
 Once we move this VM to the ISOLATED subnet it will not be able to access the internet. We will not be able to download malware samples directly from the Internet. We will download the samples onto a different VM that has Internet access and then move them to this machine using SSH. I will cover this process in more detail in a later module. For now, we need to install “OpenSSH Server”.
 
@@ -342,17 +346,19 @@ Search for “SSH”. Enable “OpenSSH Server” and then click on Install.
 
 Once the install is complete if you search for “SSH” in the “Installed features” section you should see “OpenSSH Client” and “OpenSSH Server”.
 
-Moving VM to the Isolated Network
+## <span style="color: royalblue; font-weight: bold;">Moving VM to the Isolated Network</span>
 
 Shut down the VM. Open the VM Settings page and go to Network. For the Attached to field select Internal Network. For name select LAN 3. Click on OK to save the changes.
 
-Creating VM Snapshot 3
+### Creating VM Snapshot 3
 
 Using the Hamburger menu open the Snapshot page. Click on Take to create a Snapshot. Give the Snapshot a descriptive name and then click on Ok.
 
 You can now delete the Windows 10 Enterprise ISO if you do not plan to store it in the future.
-REMnux VM Setup
-Download Image
+
+## <span style="color: royalblue; font-weight: bold;">REMnux VM Setup</span>
+
+### Download Image
 
 Go to the following link: Get the Virtual Appliance - REMnux Documentation
 
@@ -362,7 +368,7 @@ Click on the blue Download button. The image is ~5GB.
 
 Once the download is complete we will have an .ova file.
 
-Creating the VM
+### Creating the VM
 
 Click on Tools from the sidebar and then select Import.
 
@@ -370,25 +376,25 @@ Select the downloaded OVA file and click on Next.
 
 Configure the VM as required. Ensure the VM has 4096MB of RAM. For the MAC Address Policy select “Generate new MAC addresses for all network adapters” then click on Finish.
 
-Adding VM to Group
+### Adding VM to Group
 
 Once the import is complete right-click on the VM and select Move to Group -> Home Lab/Malware Analysis.
 
-Configuring the VM
+### Configuring the VM
 
 Select the VM then click on Settings from the toolbar.
 
 Go to System -> Motherboard. In Boot Order ensure that Hard Disk is on the top followed by Optical. Uncheck Floppy. Click on OK to save the changes.
 
-Post-Install Configuration
+### Post-Install Configuration
 
 Select the VM and from the toolbar click on Start.
 
-Updating Guest Additions
+### Updating Guest Additions
 
 The VM will already have Guest Additions installed but it will be an older version. From the VM toolbar select Devices -> Upgrade Guest Additions to update Guest Additions.
 
-Upgrading Packages
+### Upgrading Packages
 
 Once Guest Additions is updated open a Terminal and enter the following command to update the system packages.
 
@@ -396,13 +402,13 @@ remnux upgrade
 
 Once the update is complete restart the VM.
 
-Moving VM to the Isolated Network
+## <span style="color: royalblue; font-weight: bold;">Moving VM to the Isolated Network</span>
 
 Shut down the VM. Open the Settings menu and select Network.
 
 For the Attached to option select Internal Network. For the name field select LAN 3. Click on OK to save the changes. This will move the VM to the ISOLATED interface that does not have internet access.
 
-Creating VM Snapshot
+### Creating VM Snapshot
 
 Click on the Hamburger menu and select Snapshot.
 
@@ -414,4 +420,4 @@ Use the Hamburger menu to go back to the Details page.
 
 In the next, module we will start configuring the Security subnet. This subnet will have our DFIR VM and SIEM (Splunk).
 
-Part 9 - Tsurugi Linux (DFIR) Setup
+<span style="color: royalblue; font-weight: bold;">Part 9 - Tsurugi Linux (DFIR) Setup</span>

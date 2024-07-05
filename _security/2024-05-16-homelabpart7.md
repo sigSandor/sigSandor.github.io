@@ -6,7 +6,7 @@ parent: Network & Security Home Lab
 nav_order: 7
 nav_exclude: true
 ---
-
+a
 
 ## Network & Security Home Lab: 
 
@@ -18,18 +18,17 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 7 - Active Directory Lab Setup - Part 2
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Jan 20, 2024
-Preview Image
-By David Varghese
-13 min read
 
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
+
+
 
 In the previous module, we installed Windows Server 2019, installed AD Domain Services, configured DHCP and set up a DNS Forwarder. In this module, we will continue building out the AD Lab by completing the Domain Controller setup and adding devices to the AD environment.
-Windows Server 2019 Setup
-Domain Configuration
+
+## <span style="color: royalblue; font-weight: bold;">Windows Server 2019 Setup</span>
+
+### Domain Configuration
+
+
 Certificate Service Installation
 
 Select Manage from the top right corner of Server Manager and then select “Add Roles and Features”.
@@ -48,7 +47,7 @@ After the installation is complete the server has to be restarted. Open the Star
 
 Click on Continue to restart the system.
 
-Certificate Service Configuration
+### Certificate Service Configuration
 
 After the restart once Server Manager loads. Click on the Flag icon on the top right side and select “Configure Active Directory Certificate Services”
 
@@ -64,8 +63,9 @@ Click on Next till you reach the Confirmation page. Click on Configure to save t
 
 Click on Close.
 
-User Configuration
-AD Admin Setup
+## <span style="color: royalblue; font-weight: bold;">User Configuration</span>
+
+### AD Admin Setup
 
 Open the Start menu click on “Windows Administrative Tools” and then select Active Directory Users and Computers.
 
@@ -89,7 +89,7 @@ Open the Start menu and then click on the user logo and then select Sign out.
 
 From the login screen select “Other user”. Then enter the login name and password that was configured for your domain administrator.
 
-AD User 1 Setup
+### <span style="color: royalblue; font-weight: bold;">AD User 1 Setup </span>
 
 Open the Start menu. Select “Windows Administrative Tools” and then choose Active Directory Users and Computers.
 
@@ -99,17 +99,17 @@ Enter the details for the user.
 
 Give the user a password. Check the “User cannot change password” and “Password never expires” options. Click Next to create a user.
 
-AD User 2 Setup
+### <span style="color: royalblue; font-weight: bold;">AD User 2 Setup</span>
 
 Follow the same steps as above to create a second AD User.
 
-Making AD Lab Exploitable
+###<span style="color: royalblue; font-weight: bold;">Making AD Lab Exploitable</span>
 
 To make the Active Directory Lab vulnerable we need to change some settings. We will use a PowerShell script and change so and Group Policies to achieve the desired result.
 
     You can skip this section and continue from the “Windows 10 Enterprise VM1 Setup” step if you do not plan to make your Active Directory Lab vulnerable to attacks
 
-Running Vulnerable AD Script
+### Running Vulnerable AD Script
 
 Right-click on the Start menu and select Windows PowerShell (Admin).
 
@@ -129,13 +129,13 @@ Invoke-Expression: Execute the Script
 
 Once the script reaches the end. It will wait for 30 seconds and then restart the system.
 
-Group Policy Configuration
+## <span style="color: royalblue; font-weight: bold;">Group Policy Configuration</span>
 
 After the system restarts open the Start menu and click on “Windows Administrative Tools” then choose Group Policy Management.
 
 Expand “Forest” and then expand “Domains”.
 
-Disable Windows Defender and Firewall
+### Disable Windows Defender and Firewall
 
 Right-click on the domain name. Select “Create a GPO in the domain and link here”.
 
@@ -163,7 +163,7 @@ Set it to Disabled. Click on Apply then OK to save the changes.
 
 Close Group Policy Management Editor. From the sidebar of Group Policy Management right-click on “Disable Protections” and choose “Enforced”.
 
-Enable Remote Login for Local Admins
+### Enable Remote Login for Local Admins
 
 Right-click on the domain name. Select “Create a GPO in the domain and link here”.
 
@@ -184,7 +184,7 @@ Value data: 1
 
 Click on Apply then OK. Close Group Policy Management Editor.
 
-Enable WinRM Server
+### Enable WinRM Server
 
 Right-click on the domain name. Select “Create a GPO in the domain and link here”.
 
@@ -220,7 +220,7 @@ Select “Allow Remote Shell Access” and click on “Edit policy setting”.
 
 Set the policy to Enabled. Click on Apply then OK. Close the Group Policy Management Editor.
 
-Enable RDP (Remote Desktop Protocol)
+### Enable RDP (Remote Desktop Protocol)
 
 Right-click on the domain name. Select “Create a GPO in the domain and link here”.
 
@@ -234,7 +234,7 @@ Select “Allow users to connect remotely using Remote Desktop Services” and c
 
 Set the policy to Enabled. Click on Apply then OK. Close Group Policy Management Editor.
 
-Enable RPC (Remote Procedure Call)
+### Enable RPC (Remote Procedure Call)
 
 Right-click on the domain name. Select “Create a GPO in the domain and link here”.
 
@@ -260,11 +260,11 @@ Now whenever a new device joins our AD environment the Group Policies that apply
 
     For the rest of the module the DC VM should be left powered on. To use the AD lab DC should be the first VM that is launched.
 
-Windows 10 Enterprise VM1 Setup
+## <span style="color: royalblue; font-weight: bold;">Windows 10 Enterprise VM1 Setup</span>
 
 Select Windows 10 Enterprise VM1 from the sidebar then click on Start.
 
-OS Installation
+### OS Installation
 
 Click on Next.
 
@@ -300,7 +300,7 @@ Select Not now.
 
 Once on the desktop a prompt to allow internet access should show up click on Yes.
 
-Guest Additions Installation
+## <span style="color: royalblue; font-weight: bold;">Guest Additions Installation</span>
 
 Similar to the Windows 2019 Server VM we need to install Guest Additions to enable Fullscreen mode. From the VM toolbar select Devices -> Remove disk for virtual drive. This will remove the Windows 10 image.
 
@@ -353,22 +353,23 @@ Windows 10 Enterprise VM2 Setup
 
 Follow the same steps as above to configure the VM for the second user.
 
-OS Installation
+## <span style="color: royalblue; font-weight: bold;">OS Installation</span>
 
 Use the First Name of the second user that was configured in AD.
 
-Guest Additions Installation
+## <span style="color: royalblue; font-weight: bold;">Guest Additions Installation</span>
 
-Adding VM2 to Domain
+## <span style="color: royalblue; font-weight: bold;">Adding VM2 to Domain</span>
 
 Login using the AD credentials of the second AD user.
 
-Appendix
+### Appendix
 
 With this, we have completed the setup of the Active Directory lab. To wrap up, in this module we set up 3 VMs. The 1st VM (Windows Server 2019) was configured to be the Domain Controller and the other 2 VMs (Windows 10 Enterprise) were configured as client devices. Additionally, on the DC VM, we enabled DHCP, set up DNS Forwarder, enabled AD Certificate Services and configured Policies to be applied to all devices that are part of the AD environment.
 
 You can delete the Windows Server 2019 ISO file if you do not want to store it for future use. Do not delete the Windows 10 Enterprise ISO just yet as we will require it to setup FlareVM.
-DNS & DHCP Verification
+
+### DNS & DHCP Verification
 
 To verify that the client VMs are indeed connected to the AD environment you can open DHCP Manager and compare the IP address shown with the IP address that has been assigned to the VM.
 
@@ -391,14 +392,15 @@ Select the Windows 10 Enterprise VM1 from the sidebar and follow the above steps
 Follow the same steps to create Snapshot for Windows 10 Enterprise VM2.
 
 Right-click on the hamburger menu and select “Details” to return to the VM configuration page.
-Alternative AD Setup
+
+### Alternative AD Setup
 
 Many other features and services can enabled on the DC. Refer to the below links for variations on the installation process.
 
     How to Setup a Basic Home Lab Running Active Directory - YouTube
     How to Build an Active Directory Hacking Lab - YouTube
 
-Hacking AD Lab
+### Hacking AD Lab
 
 There any numerous attacks that can be performed against an AD environment. Refer to the below links to see some of the commonly used hacks.
 
@@ -407,4 +409,4 @@ There any numerous attacks that can be performed against an AD environment. Refe
 
 In the next module, we will begin the setup of the Malware Analysis Lab.
 
-Part 7 - Malware Analysis Lab Setup
+ <span style="color: royalblue; font-weight: bold;">Part 7 - Malware Analysis Lab Setup</span>

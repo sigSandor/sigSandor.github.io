@@ -57,7 +57,7 @@ Select your Timezone and then click `Next`.
 
 ----
 
-### Configuring WAN interface
+### <span style="color: royalblue; font-weight: bold;">Configuring WAN interface</span>
 
 Scroll to the bottom of the page and look for the `RFC1918 Networks section`. Uncheck the *Block RFC1918 Private Networks* option.
 
@@ -70,7 +70,7 @@ Click on `Next`
 
 ----
 
-### Configuring LAN interface
+###  <span style="color: royalblue; font-weight: bold;">Configuring LAN interface</span>
 
 Don’t change any value on this page. Click on `Next`.
 
@@ -95,7 +95,7 @@ Once the copyright agreement is agreed to, we have access to the dashboard.
 
 ----
 
-### Interface Renaming
+### <span style="color: royalblue; font-weight: bold;">Interface Renaming</span>
 
 From the tool bar select `Interfaces -> OPT1`.
 
@@ -120,7 +120,7 @@ In the Description field enter `AD_LAB`. Scroll to the bottom of the page and cl
 
 ----
 
-## DNS Resolver Configuration
+## <span style="color: royalblue; font-weight: bold;">DNS Resolver Configuration</span>
 
 From the navigation bar select `Services -> DNS Resolver`.
 
@@ -144,7 +144,7 @@ Scroll down to the `Advanced Resolver Options` section and enable the 2 pictured
 
 ----
 
-## Advanced Configuration
+## <span style="color: royalblue; font-weight: bold;">Advanced Configuration</span>
 
 From the navigation bar select `System -> Advanced`.
 
@@ -160,7 +160,7 @@ At this point a popup will appear click on `OK` to reboot pfSense.
 
 ----
 
-## Kali Linux Static IP Assignment
+## <span style="color: royalblue; font-weight: bold;">Kali Linux Static IP Assignment</span>
 
 Once you have logged in again, 
 
@@ -180,7 +180,7 @@ A popup will show up at the top of the page. Click on `Apply Changes`.
 
 ----
 
-## Refresh Kali Linux IP Address
+## <span style="color: royalblue; font-weight: bold;">Refresh Kali Linux IP Address</span>
 
 Open a terminal next. Use the following command to see the current IP address.
 
@@ -205,7 +205,7 @@ ip a l eth0
 ----
 
 
-## pfSense Firewall Configuration: LAN Rules
+## <span style="color: royalblue; font-weight: bold;">pfSense Firewall Configuration: LAN Rules </span>
 
 > Back to pfSense
 
@@ -245,7 +245,7 @@ The final LAN rules should match the picture below.
 
 ----
 
-## CYBER_RANGE Rules
+## <span style="color: royalblue; font-weight: bold;">CYBER_RANGE Rules</span>
 
 Before creating the rules for `CYBER_RANGE` we need to create a *Alias*. From the navigation bar select `Firewall -> Aliases -> IP`.
 
@@ -372,8 +372,8 @@ The final rules should look as follows:
 ![vbox96.png](/assets/vbox96.png){: width="auto" height="auto" }
 
 ----
-
-## AD_LAB Rules
+ 
+## <span style="color: royalblue; font-weight: bold;">AD_LAB Rules</span>
 
 Click on the `AD_LAB` tab in `Firewall -> Rules`. Use the “Add rule to end” button to create new rules.
 
@@ -452,7 +452,7 @@ The final rules should look as follows:
 
 ----
 
-# pfSense Reboot
+# <span style="color: royalblue; font-weight: bold;"> pfSense Reboot</span>
 
 Now we need to restart pfSense to persist the firewall rules. From the navigation bar select `Diagnostics -> Reboot`.
 

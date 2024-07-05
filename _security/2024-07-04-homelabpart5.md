@@ -20,8 +20,7 @@ Virtual Machine images come in multiple formats - `.vmdk` (Virtual Machine Disk 
 {: .warning }
 Also remember to boot the pfSense router VM before proceeding with the below setup. Once pfSense is up you can start the Kali Linux VM as well.
 
-VM 1: Metasploitable 2
-Download Metasploitable 2
+## <span style="color: royalblue; font-weight: bold;">VM 1: Metasploitable 2</span>
 
 Go to the following URL: Metasploitable: 2 ~ VulnHub and download Metasploitable.
 
@@ -29,7 +28,7 @@ The download is a compressed file (.zip). Use an extraction software like 7-zip 
 
 The folder will have multiple files. We only require the .vmdk file.
 
-Creating the VM
+### <span style="color: royalblue; font-weight: bold;">Creating the VM</span>
 
 Launch VirtualBox. Select Tools from the sidebar, then click on New from the toolbar.
 
@@ -47,7 +46,7 @@ Confirm that everything looks correct and click on Finish.
 
 You will get a Warning as shown in the below image. Ignore it and click on Continue.
 
-Adding VM to Group
+### <span style="color: royalblue; font-weight: bold;">Adding VM to Group</span>
 
 Right-click on the Metasploitable VM. Select Move to Group -> [New].
 
@@ -59,7 +58,7 @@ Right-click on the Cyber Range group and select Move to Group -> Home Lab.
 
 The final output should look as follows:
 
-Configuring the VM
+### <span style="color: royalblue; font-weight: bold;">Configuring the VM</span>
 
 All my VMs for the Home Lab project are located in D:\Virtual Machines. Whenever we create a new group in VirtualBox a corresponding folder is created is created on the filesystem to store the VM.
 
@@ -79,7 +78,7 @@ Go to System -> Motherboard. For Boot Order ensure that the Hard Disk is on the 
 
 Go to Network -> Adapter 1. Change the Attacked to field to Internal Network and in Name select LAN 1. Click on OK to save the changes.
 
-Testing Connectivity
+### <span style="color: royalblue; font-weight: bold;">Testing Connectivity</span>
 
 From the sidebar select Metasploitable 2 and then click on Start.
 
@@ -105,14 +104,15 @@ We can also try to reach the Metasploitable 2 VM from Kali Linux.
 
 ping 10.6.6.12 -c 5
 
-VM 2: Chronos
+## <span style="color: royalblue; font-weight: bold;">VM 2: Chronos</span>
+
 Download Chronos
 
 Go to the following URL: Chronos: 1 ~ VulnHub and download Chronos.
 
 The downloaded file is a .ova file.
 
-Creating the VM
+### <span style="color: royalblue; font-weight: bold;">Creating the VM</span>
 
 From the VirtualBox sidebar select Tools and then click on Import.
 
@@ -122,13 +122,13 @@ From this menu, we can change the configuration of the VM as required. I have go
 
 The import process can take some time.
 
-Adding VM to Group
+### <span style="color: royalblue; font-weight: bold;">Adding VM to Group</span>
 
 Once the import is complete right-click on the VM and then select Move to Group -> Home Lab/Cyber Range.
 
 The result result will be as follows:
 
-Configuring the VM
+### <span style="color: royalblue; font-weight: bold;">Configuring the VM</span>
 
 Select the Chronos VM and then from the toolbar click on Settings.
 
@@ -136,7 +136,7 @@ Go to System -> Motherboard. For Boot Order ensure that Hard Disk is on the top 
 
 Go to Network -> Adapter 1. For the Attached to field select Internal Network, for name select LAN 1. Expand the Advanced settings option. From Adapter Type select Paravirtualized Network (virtio-net). Click OK to save the changes.
 
-Testing Connectivity
+### <span style="color: royalblue; font-weight: bold;">Testing Connectivity</span>
 
 Select the Chronos VM and from the toolbar select Start. Once the VM starts we should see the login screen. The credentials for this machine are not known so we cannot log in and check if it has been assigned an IP address.
 
