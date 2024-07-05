@@ -17,11 +17,6 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 11 - Transferring Files to Malware Analysis Lab
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Feb 19, 2024
-Preview Image
-By David Varghese
-4 min read
 
 Banner Background by logturnal on Freepik
 Hacker Image by catalyststuff on Freepik
@@ -29,7 +24,8 @@ Hacker Image by catalyststuff on Freepik
 In this module, we will see how we can transfer files using SCP from “Tsurugi Linux” which is on the SECURITY subnet to VMs on the ISOLATED subnet.
 
 I recommend this approach to get Malware Samples into the Malware Analysis Lab. We can use other methods for transferring files to these VMs but since we are dealing with Malware I want to keep the samples isolated from the Internet and the host machine filesystem.
-Tsurugi Linux Static IP Assignment
+
+## <span style="color: royalblue; font-weight: bold;"> Tsurugi Linux Static IP Assignment</span>
 
 Start the pfSense VM if it is shut down. Once pfSense is up and running. Start the Tsurugi Linux VM. One the terminal and run the following command:
 
@@ -47,7 +43,7 @@ In the IP Address field enter 10.10.10.2. Scroll to the bottom and click on Save
 
 A popup will appear at the top. Click on Apply Changes.
 
-Refreshing Tsurugi Linux IP Address
+## <span style="color: royalblue; font-weight: bold;">Refreshing Tsurugi Linux IP Address</span>
 
 On Tsurugi Linux from the terminal run the following command:
 
@@ -60,7 +56,7 @@ ip a enp0s3
 
 Refresh the DHCP Leases page and we should see that Tsurugi Linux is now using the IP address that we configured.
 
-pfSense Firewall Configuration
+## <span style="color: royalblue; font-weight: bold;">pfSense Firewall Configuration</span>
 
 From the navigation bar select Firewall -> Rules.
 
@@ -76,8 +72,9 @@ A popup will appear at the top of the page. Click on Apply Changes.
 
 The final firewall rules will look as follows:
 
-Enabling SSH
-Tsurugi Linux
+## <span style="color: royalblue; font-weight: bold;">Enabling SSH</span>
+
+### Tsurugi Linux
 
 Run the following command to check if SSH is running.
 
@@ -87,7 +84,7 @@ If SSH is disabled use the following command to enable it.
 
 sudo systemctl start ssh
 
-Flare VM (Windows)
+### Flare VM (Windows)
 
 Right-click on the Start menu icon. Select Windows PowerShell (Admin).
 
@@ -101,7 +98,7 @@ Start-Service sshd
 
 How to SSH into a Windows 10 Machine from anywhere - Scott Hanselman’s Blog
 
-REMnux Linux
+### REMnux Linux
 
 Running the following commands to check the status of SSH and enable it.
 
@@ -111,8 +108,9 @@ systemctl status ssh
 # Enable SSH
 sudo systemctl start ssh
 
-Testing SSH Connectivity
-Finding Target VM IP Address
+## <span style="color: royalblue; font-weight: bold;">Testing SSH Connectivity</span>
+
+### Finding Target VM IP Address
 
 To connect to Flare VM and REMnux we need their IP address.
 
@@ -120,7 +118,7 @@ ipconfig
 
 ip a
 
-Connecting to Flare VM
+### Connecting to Flare VM
 
 In my case, the IP address of Flare VM is 10.99.99.11.
 
@@ -135,7 +133,8 @@ Enter the password of the target system when prompted.
 This will log you into Flare VM.
 
 Type exit to quit the remote connection.
-Connecting to REMnux Linux
+
+### Connecting to REMnux Linux
 
 In my case, the IP address for REMnux is 10.99.99.12.
 
@@ -148,7 +147,8 @@ Type yes to add the fingerprint.
 Enter the password of the target system when prompted.
 
 Type exit to quit the remote connection.
-SCP File Transfer
+
+## <span style="color: royalblue; font-weight: bold;">SCP File Transfer</span>
 
 Now we know that we can connect to the Malware Analysis Lab VMs from Tsurugi Linux.
 
@@ -158,7 +158,7 @@ cd Downloads
 echo "Hello Hello World" > hello.txt
 cat hello.txt
 
-File Transfer to Flare VM
+## <span style="color: royalblue; font-weight: bold;">File Transfer to Flare VM</span>
 
 To transfer hello.txt to the target systems we will use SCP which is can command line utility that uses SSH to securely copy files over the network.
 
@@ -169,7 +169,7 @@ scp hello.txt david@10.99.99.11:/C:/Users/David/Downloads
 
 The above command will copy the file into the Downloads folder on Flare VM.
 
-File Transfer to REMnux Linux
+### File Transfer to REMnux Linux
 
 Using the same command we can move the file onto REMnux as well.
 
@@ -181,19 +181,19 @@ The above command will copy the file into the Downloads folder on REMnux.
     To copy a whole folder use the -r (recursive) flag with the SCP command
     SCP Linux - Securely Copy Files Using SCP examples
 
-Disabling SSH
+## <span style="color: royalblue; font-weight: bold;">Disabling SSH</span>
 
 Once you copy the required files onto the Malware Analysis lab use the following commands to disable SSH on all the systems.
-Tsurugi Linux
+
+### Tsurugi Linux
 
 sudo systemctl stop ssh
 
-Flare VM (Windows)
+### Flare VM (Windows)
 
 Stop-Service sshd
 
-REMnux Linux
+### REMnux Linux
 
 sudo systemctl stop ssh
 
-Security, Home Lab
