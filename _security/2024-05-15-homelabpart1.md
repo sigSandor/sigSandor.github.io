@@ -16,36 +16,38 @@ nav_exclude: false
 ## <span style="color: orange; font-weight: bold;">Part 1 - Introduction</span>
 
 ###### Posted ***May 20, 2024***
-This guide was inspired by David Varghese's [blog] post.
 
-The following guide will not be easy or short, it will be catering to entry level IT and CyberSecurity folk who already have a basic understanding of virtualbox, virtualization, and windows experience.
+{: .warning }
+This series was inspired and follows a similar structure to David Varghese's [blog] guide.
+However, I did my best to put my own spin on the home lab guide. 
 
 ----
 
 ## <span style="color: royalblue; font-weight: bold;">Item Overview</span>
 
-- PFsense (Firewall&Router)
-- Active Directory Lab( Domain Controller & 3 clients)
-- Security Virtual Machines (DFIR&SIEM)
-- Cyber Control Range (Mock Enterprise enviroment)
+- PFsense (Firewall & Router)
+- Active Directory Lab
+- Security Virtual Machines (DFIR & SIEM)
+- Cyber Control Range 
 - Malware Analysis Lab (Windows & Linux)
-- Kali & Parrot linux
+- Parrot linux
 
 ##  <span style="color: royalblue; font-weight: bold;">Recommended Requirements</span> 
 - Windows 7 or 10 host OS
-- 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support
+- 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support enabled
 - 16GB RAM
-- 500gb - 1TB Disk Space
+- 500gb - 1TB Free disk space
+
 
 {: .warning }
-You can check if Virtualization is enabled by pressing *Shift>Control>Esc* at the same time to open ***Task Manager***. There, under the Performance tab you can see if virtualization is enabled
+You can check if Virtualization is enabled right now, by pressing *Shift>Control>Esc* to open ***Task Manager***. Under the Performance tab you can see if virtualization is enabled
 
 ![taskm1](/assets/taskm1.png)
 
 
-To follow along successfully, you ***should*** have either [VirtualBox] or VMware already installed, with [VC++] 2019 Redistributable and as well as enable VBox guest additions. 
+You should also already have [VC++] 2019 Redistributable installed as well.
 
-You can also view a [Virtualization Guide] on this page.
+You can view a [Virtualization Guide] on this page.
 
 
 In the next module, we will start with the installation and configuration of pfSense.

@@ -13,67 +13,89 @@ nav_exclude: false
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
 
 {: .text-center }
-## <span style="color: orange; font-weight: bold;">Part 3 - Kali Linux setup</span>
+## <span style="color: orange; font-weight: bold;">Part 3 - Parrot Linux setup</span>
 
 ###### Posted ***June 16, 2024***
 
 
-In this module, we are going to install Kali Linux. This VM will be used for red teaming.
+In this module, we are going to install Parrot OS. This VM will be used for ethical hacking.
 
 We will use this VM in the next module also to complete the pfSense final setup.
 
-## <span style="color: royalblue; font-weight: bold;">Download Kali Linux</span>
+## <span style="color: royalblue; font-weight: bold;">Download Parrot Linux</span>
 
-Go to the following link: `Download` > [Kali linux] 
+Go to the following link: `Download` > [Parrot linux] 
 
-As of writing the latest version of Kali Linux is `2024.2`
+As of writing the latest version of Parrot is `6.1 Lorikeet`
 
 ![vbox41.png](/assets/vbox41.png){: width="auto" height="auto" }
 
-Download the 64-bit Recommended Installer. The image is around 4GB in size so it will take some time to download.
+- Download the recommended VirtualBox `.ova`. The image is around 7GB in size so it will take some time to download.
 
-Once it is downloaded we should have an `.iso` file.
-Move this file to the folder where the pfSense iso was also stored.
+> Once it is downloaded we should have an `.ova` file.
 
-## <span style="color: royalblue; font-weight: bold;">Kali Linux VM Creation</span>
+- Move this file to the folder where the pfSense iso was also stored.
 
-> Open VirtualBox. 
+{: .warning}
+Since this is a .ova file, you will `import` not Create `new`. In VirtualBox.
 
-> Select `Machine` from the toolbar and then click on `New`.
+----
 
-Name the VM, Kali linux. Set the Folder option to the location where the Home Lab VMs are going to be saved. 
+## <span style="color: royalblue; font-weight: bold;">ParrotSec VM Creation</span>
 
-***Leave the ISO Image option empty***
+- Open VirtualBox. 
 
-Select Type as `Linux` and Version as ` Debian (64-bit)` then click on `Next`.
+- Select `Machine` from the toolbar and then click on `Import`.
+
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
 ![vbox42.png](/assets/vbox42.png){: width="auto" height="auto" }
 
+</details>
 
-> For the Hardware section, 2048 memory and 2 cores is enough (default values). 
+- Select the folder where the Parrot `.ova` is stored, then hit `Next`
+
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
 ![vbox43.png](/assets/vbox43.png){: width="auto" height="auto" }
+
+</details>
+
+
+> For the Appliance Settings, select Generate new mac addresses, then hit `Next`. 
+
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
+
+![vbox44.png](/assets/vbox44.png){: width="auto" height="auto" }
+
+</details>
 
 {: .warning }
 You are able to change values later on for hardware resources if need be.
 
->Click on `Next`.
+> Click on `Finish`.
 
-Increase the Disk Size to `80GB` and click on `Next`.
+> Lastly, there will be an Agreenment to Accept or Deny. Once accepted, the `.OVA` appliance will begin importing.
 
-![vbox44.png](/assets/vbox44.png){: width="auto" height="auto" }
-
-Ensure that all the settings look right and click on Finish.
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
 ![vbox45.png](/assets/vbox45.png){: width="auto" height="auto" }
 
-## Adding VM to Group <span style="color: royalblue; font-weight: bold;"> </span>
+</details>
 
-> Right-click on the Kali Linux VM from the sidebar, select Move to Group -> `New`.
+----
+
+## <span style="color: royalblue; font-weight: bold;">Adding VM to Group </span>
+
+> Right-click on the Parrot VM from the sidebar, select Move to Group -> `New`.
 
 > Right-click on the group name and select `Rename Group`. Name the group `Management`.
 
-> Now we are going to creat a nested group for our home lab.
+> Now we are going to create a nested group for our home lab.
 
 Select the Firewall and Management group `(Ctrl+Click)`. Right-click on the name of one of the groups. From the menu select Move to Group -> [New].
 
@@ -81,33 +103,63 @@ Now both the groups should be nested inside the `New Group` . Right-click on the
 
 Double check, now we should have the following structure:
 
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
+
 ![vbox46.png](/assets/vbox46.png){: width="auto" height="auto" }
 
-# <span style="color: royalblue; font-weight: bold;">Kali Linux VM Configuration</span>
+</details>
 
-Select the Kali Linux VM and then from the toolbar select Settings.
+----
 
-## <span style="color: royalblue; font-weight: bold;">System Configuration</span>
+# <span style="color: royalblue; font-weight: bold;">Parrot Updating</span>
 
-Go to `System` -> `Motherboard`. For the Boot Order option ensure that the `Hard Disk` is on the top followed by `Optical`. 
+- When Parrot boots, after a couple seconds it will ask to search for updates.
 
-> `Uncheck Floppy`.
+- Hit `Yes` to check for updates.
 
 ![vbox47.png](/assets/vbox47.png){: width="auto" height="auto" }
 
-##<span style="color: royalblue; font-weight: bold;">Boot Image Configuration </span>
+## <span style="color: royalblue; font-weight: bold;">Default password</span>
 
-> Go to the `Storage` tab.
-Select the Empty disk present below `Controller: IDE` then click on the small disk icon on the right side of the Optical Drive option.
+- It will ask for a root password.
 
-Select `Choose a disk file` and then select the downloaded `.iso` file we have for Kali Linux.
+{: .warning }
+We need to change the default credentials, they are by default: 
 
+```scss
+user: parrot
+password: parrot
+```
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
 
 ![vbox48.png](/assets/vbox48.png){: width="auto" height="auto" }
 
-The final result should look as follows:
-
 ![vbox49.png](/assets/vbox49.png){: width="auto" height="auto" }
+
+</details>
+
+- Once updated, find the terminal on the top right of the machine.
+
+> Run the following command: 
+
+```scss
+sudo apt autoremove
+```
+
+<details markdown="block">
+<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
+
+</details>
+
+> Now run:
+
+```scss
+sudo shutdown now
+```
+
+----
 
 ## <span style="color: royalblue; font-weight: bold;">Network Configuration</span>
 
@@ -117,123 +169,50 @@ Go to `Network -> Adapter 1`. For the Attached to field select `Internal Network
 ![vbox50.png](/assets/vbox50.png){: width="auto" height="auto" }
 
 
-## <span style="color: royalblue; font-weight: bold;">Kali Linux Installation</span>
+## <span style="color: royalblue; font-weight: bold;">Changing Default password/IP a</span>
 
-***Remember to boot the pfSense VM first, before starting the Kali Linux installation.***
+> Select pfSense from the sidebar and click on `Start` on the toolbar.
 
-Select Kali Linux from the sidebar and click on `Start` on the toolbar.
+> Select Parrot OS Security Edition from the sidebar and click on `Start` on the toolbar.
 
-> From the Installer menu select Graphical Install.
+> Once Parrot starts, find the terminal in the top left.
+
+-  We will run a series of commands, *firstly* to identify if pfSense issued an IP address in the correct subnet, and *secondly* to change the password.
+
+{: .warning}
+You should also change the default username.
+
+
+```scss
+ip a
+```
 
 ![vbox51.png](/assets/vbox51.png){: width="auto" height="auto" }
 
-> The next steps will ask about your preffered Language, location and keyboard layout. 
-select whatever makes sense for you, or just enter for default.
+- We can confirm the right subnet is designated by cross referencing the pfSense router. See below.
 
 <details markdown="block">
 <summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
+
+![vbox53.png](/assets/vbox53.png){: width="auto" height="auto" }
+
+</details>
+
+
+```scss
+sudo su
+
+passwd user
+```
 
 ![vbox52.png](/assets/vbox52.png){: width="auto" height="auto" }
-![vbox53.png](/assets/vbox53.png){: width="auto" height="auto" }
-![vbox54.png](/assets/vbox54.png){: width="auto" height="auto" }
 
-</details>
-
-
-On the next page, you will be required to enter a name for the VM. I simply put kali. 
-
-The hostname is used to identify the system on the network. 
 
 {: .warning }
-The hostname can be changed after installation.
-
-![vbox55.png](/assets/vbox55.png){: width="auto" height="auto" }
-
-Leave the domain name input blank in the next section and click on *Continue*.
-
-![vbox56.png](/assets/vbox56.png){: width="auto" height="auto" }
-
-Next,
-Enter your desired name and credentials. This name will be shown on the login screen.
-
-![vbox57.png](/assets/vbox57.png){: width="auto" height="auto" }
-
-{: .warning }
-If you often forget your passwords, you can stop the installation at this point and create a new *clone* using VirualBox.
+If you often forget your passwords, you can stop at this point and create a new *clone* using VirualBox.
 
  
-You can do so by right clicking on your (closed) VM and clicking clone. Or alternatively CNTL + O
-
-### <span style="color: royalblue; font-weight: bold;">Username and Password</span>
-
-The username is used to create the home directory for the user. All the user-related configurations are stored in this folder.
-
-![vbox58.png](/assets/vbox58.png){: width="auto" height="auto" }
-
-Enter a strong password. Re-enter the password in the second field and click on Continue.
-
-![vbox59.png](/assets/vbox59.png){: width="auto" height="auto" }
-
-# <span style="color: royalblue; font-weight: bold;">Final steps</span>
-
-
-Select your `clock` and then click on `Continue` (Default is Central or Eastern).
-
-Select the drive `(sda)` and click on `Continue` (Should be the only option).
-
-Select *Guided - use entire disk* and then click on `Continue` (Easiest option, LVM is for advanced users).
-
-Select the option: *All files in one partition* and click on `Continue`.
-
-Select Finish partitioning and write changes to disk. Then click on `Continue`.
-
-Select `Yes` to write changes to the disk, then click on `Continue`.
-
-> Kali will begin installing the base system. 
-
-<details markdown="block">
-<summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
-
-![vbox60.png](/assets/vbox60.png){: width="auto" height="auto" }
-![vbox61.png](/assets/vbox61.png){: width="auto" height="auto" }
-![vbox62.png](/assets/vbox62.png){: width="auto" height="auto" }
-![vbox63.png](/assets/vbox63.png){: width="auto" height="auto" }
-![vbox64.png](/assets/vbox64.png){: width="auto" height="auto" }
-![vbox65.png](/assets/vbox65.png){: width="auto" height="auto" }
-![vbox66.png](/assets/vbox66.png){: width="auto" height="auto" }
-
-</details>
-
-
-## <span style="color: royalblue; font-weight: bold;">Desktop Enviroment</span>
-
-After the base system installation completes, we ahve to choose the desktop environment that will be installed. I have selected GNOME for installation. David Varghese also suggests this choice, as KDE is a bit more resource heavy and XFCE is default. You can make a personal choice here, but I like GNOME desktop enviroment.
-
-> You will also be asked to confirm the installation of the GRUB boot loader which is necessary.
-
-![vbox67.png](/assets/vbox67.png){: width="auto" height="auto" }
-![vbox68.png](/assets/vbox68.png){: width="auto" height="auto" }
-![vbox69.png](/assets/vbox69.png){: width="auto" height="auto" }
-
-----
-
-The installation will take some time. 
-
-> The final question will just ask about rebooting.
-
-![vbox70.png](/assets/vbox70.png){: width="auto" height="auto" }
-
-Click on `Continue` to Reboot the system.
-
-After reboot, we should see the Login screen. Once you enter your created password, Click `Enter` to log in. 
-
-### <span style="color: royalblue; font-weight: bold;">Post-Installation Configuration </span>
-
-Kali Linux installer can detect when it is run from a VM because of this it automatically installs Guest Addons.
-
-> Select the Terminal.
-
-Run the command: `ip a`. We can see what the Kali VM has been assigned for an IP address from the LAN network range. The VM should be able to access the internet now.
+### <span style="color: royalblue; font-weight: bold;">Post-Installation Configuration (Optional)</span>
 
 > Use the following command in the terminal to update the system:
 
@@ -251,7 +230,6 @@ After the update is complete run the following command to remove the unused pack
 sudo apt autoremove
 ```
 
-The `.iso` file that was downloaded to create the VM can be deleted now if you do not plan to store it for future use.
 
 In the next module, we will access the pfSense Web UI and complete the remaining configuration.
 
@@ -259,4 +237,4 @@ In the next module, we will access the pfSense Web UI and complete the remaining
 
 
 
-[Kali linux]: https://www.kali.org/get-kali/#kali-installer-images
+[Parrot linux]: https://parrotsec.org/download/

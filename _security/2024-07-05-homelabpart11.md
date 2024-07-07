@@ -17,10 +17,6 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 11 - Transferring Files to Malware Analysis Lab
 
-
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
-
 In this module, we will see how we can transfer files using SCP from “Tsurugi Linux” which is on the SECURITY subnet to VMs on the ISOLATED subnet.
 
 I recommend this approach to get Malware Samples into the Malware Analysis Lab. We can use other methods for transferring files to these VMs but since we are dealing with Malware I want to keep the samples isolated from the Internet and the host machine filesystem.

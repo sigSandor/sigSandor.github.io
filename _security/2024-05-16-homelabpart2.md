@@ -20,27 +20,29 @@ nav_exclude: false
 
 
 
-In this module, we will go over the basic installation of ***pfSense***. Additionally, we will also complete the system configuration, and network interfaces for our lab.
+In this portion, we will go over the basic installation of `pfSense` as a virtual machine. Later on, we will also complete the system configuration, network interfaces, and then configure the router for the lab.
 
 ----
 
 {: .warning }
-pfSense is going to be the default gateway and firewall for our home lab. 
-This means that pfSense should be the first VM that is booted. 
-Once pfSense is launched other VMs in the lab can be launched following.
+pfSense is going to be the default gateway for our home lab. 
+This means that pfSense will have to be the first VM that is booted. 
+Any VM's launched before pfSense will have connectivity issues.
 
 ## <span style="color: royalblue; font-weight: bold;">Downloading pfSense</span>
 
-Go to the page : `pfSense Community Edition` > [Download] 
+> For the download,
+
+Go to: `pfSense Community Edition` > [Download] 
 
 As of May 22, 2024 the latest version of pfSense is `2.7.2`.
 
-You will most likely have to create an account with NetGate, who is partnered with pfSense.
-Account setup is *free*, but will require some self navigation to access the download.
+You will have to create an account with NetGate, which I wont be covering.
+Account setup is free, and once registered navigate to the download portal.
 
 ![vbox18.png](/assets/vbox18.png){: width="auto" height="auto" }
 
-### <span style="color: royalblue; font-weight: bold;">Select an option with the following:</span>
+### <span style="color: royalblue; font-weight: bold;">Select the following:</span>
 
 > Architecture: `AMD64 (64-bit)`
 
@@ -48,62 +50,74 @@ Account setup is *free*, but will require some self navigation to access the dow
 
 > Mirror: `Location closest to you`
 
-The downloaded file should have the extension of `.iso.gz`
+The downloaded file will have an `.iso.gz` file type.
 
 You can use *7-Zip* or another decompression software to extract the image.
 
-After extraction, we should have a file that has the `.iso` extension. 
+After extraction, we should have a `.iso` file. 
 
+----
 
-> Optionally, you can move the ISO to a new directory in which you will be storing your lab iso. 
+Optionally, you can create a specific folder for the downloaded and extracted files to live in.
+
+Here, I created a folder in `Documents>Virtual Machine Folder` that I will be using for the duration of the guide.
+
  
 ![vbox19.png](/assets/vbox19.png){: width="auto" height="auto" }
 
+----
 
 ## <span style="color: royalblue; font-weight: bold;">pfSense VM Creation</span>
 
 Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 
 
-> For name selection, PfSense is fine. 
-> The Folder option defines the location where the VM will be saved (I created a new folder called VirtualBox VMs)
+- For name selection, PfSense Firewall/Router works. 
 
-> From the ISO Image dropdown select *Others* in oreder to select the .iso file that we just extracted. 
-> Select Type as `BSD` and Version as `FreeBSD (64-bit)` and then click on `Next`.
+- From the ISO Image dropdown select *Others* in order to select the `.iso` file that we just extracted. 
+
+- Select Type as `BSD`, and Version as `FreeBSD (64-bit)` then click on `Next`.
 
 ![vbox3](/assets/vbox3.png){: width="auto" height="auto" }
 
-On the next page, we can select the amount of RAM and CPU that the VM can use. As a Baseline, You can choose 1024-2048 Base memory and 1-2 CPU cores. Click on `Next` to continue. 
-> (No need for extraneous Memory or Enabling EFI)
+- On the next page, we can select the amount of RAM and CPU that the VM will use. As a baseline, You can choose 1024-2048 Base memory and 1-2 CPU cores. 
+
+- Click on `Next` to continue. 
+> (No need for extraneous Memory or Enabling EFI in this case)
 
 
 ![vbox4](/assets/vbox4.png){: width="auto" height="auto" }
 
-On the next page, we can choose the amount of storage space to reserve for the VM. 20GB is just fine for this less resource heavy VM.
+- On the next page, we can choose the amount of storage space to reserve for the VM. (20GB will suffice.)
 
 ![vbox5](/assets/vbox5.png){: width="auto" height="auto" }
 
+----
 
 ## <span style="color: royalblue; font-weight: bold;">Final Confirmation</span>
 
 ![vbox6](/assets/vbox6.png){: width="auto" height="auto" }
- > Confirm that everything looks right and then click on `Finish`.
- > Once done we should see the newly created VM in the sidebar.
+- Confirm that everything looks right and then click on `Finish`.
+
+- Once done, we should see the newly created VM in the sidebar.
  
+----
 
 ## <span style="color: royalblue; font-weight: bold;">Grouping our First VM</span>
 
-I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing organization since we are dealing with a large number of virtual machines.
+I want to keep the VMs organized by using the Groups feature of VirtualBox. I would strongly suggest implementing such organization since we are dealing with a large number of virtual machines.
 
-> To Create a group
+### To Create a group
 
-Right-click on the pfSense VM from the sidebar, `select Move to Group -> *New*`. The VM will now be added to a Group called New Group.
+- Right-click on the pfSense VM from the sidebar, `select Move to Group -> *New*`. The VM will now be added to a Group called New Group.
 
 Right-click on the Group, and select `Rename Group`. Name the Group ***Firewall***.
 
 The final result should match the following:
 
 ![vbox7](/assets/vbox7.png){: width="auto" height="auto" }
+
+----
 
 ## <span style="color: royalblue; font-weight: bold;">pfSense Basic Virtual Configuration</span>
 
@@ -122,10 +136,10 @@ You may have to drag the top of the window *upwards* in order to hit the next bu
 
 ### <span style="color: royalblue; font-weight: bold;">Audio & USB Configuration</span>
 
-> Go to the Audio tab and disable Audio option. Since the VM we are configuring is a router we will not be using audio. (optional)
+- Go to the Audio tab and disable Audio option. Since the VM we are configuring is a router we will not be using audio. (optional)
 
 
-> Go to the USB tab and uncheck the Enable USB Controller option. Since this VM we are configuring is a router we will not need USB support. (optional)
+- Go to the USB tab and uncheck the Enable USB Controller option. Since this VM we are configuring is a router we will not need USB support. (optional)
 
 ## <span style="color: royalblue; font-weight: bold;">Network Configuration</span>
 
@@ -161,15 +175,16 @@ Additionally, you can find a [Virtualbox Network Settings Guide] here.
 
 ## <span style="color: royalblue; font-weight: bold;">pfSense Installation</span>
 
-Essentially, the installation process will be hitting quite a few times.
+For the pfSense install, the installation process will just be hitting `next` quite a few times.
 
-> To start select the pfSense VM from the sidebar and hit the `Start` icon.
+- To start select the pfSense VM from the sidebar and hit the `Start` icon.
 
-*Please read along if you would like to confirm the correct setup steps.* 
+*Please refer to the photos for confirmation*
 
-> Initally, an agreement will appear. Press Enter if you would like to Accept the agreement. 
+- Initally, an agreement will appear. `Press Enter` if you would like to Accept the agreement. 
 
-(note you will have to accept the agreement to use the features of this VM)
+{: .warning }
+Note you will have to accept the agreement to use the features of this machine.
 
 <details markdown="block">
 <summary> <span style="color: orange; font-weight: bold;">Image Ref. (click me!)</span> </summary>
@@ -184,21 +199,21 @@ Essentially, the installation process will be hitting quite a few times.
 ![vbox33.png](/assets/vbox33.png){: width="auto" height="auto" }
 </details>
 
-> Press Enter to start the Installation.
+> Press Enter to `start the Installation`.
 
-> Press Enter to select the Auto (ZFS) partition option.
+> Press Enter to select the `Auto (ZFS) partition option`.
 
-> Press Enter to select Proceed with Installation.
+> Press Enter to select `Proceed with Installation`.
 
-> Press Enter to select Stripe - No Redundancy.
+> Press Enter to select `Stripe - No Redundancy`.
 
-> Use the Spacebar key to select the Hard Drive (ada0) then press Enter to continue.
+> Use the Spacebar key to select the `Hard Drive (ada0)` then press Enter to continue.
 
 > Use the Left Arrow to select YES and then press Enter to continue.
 
-Wait for the installation to complete.
+> Wait for the installation to complete.
 
-Press Enter to Reboot the VM.
+> Press Enter to Reboot the VM.
 
 
 ## <span style="color: royalblue; font-weight: bold;">pfSense Configuration </span>
@@ -219,7 +234,7 @@ Once pfSense reboots, the first priority is to configure the adapters we created
 </details>
 
 
-> Should VLANs be set up now? n
+> Should VLANs be set up now? `n`
 
 > In the next step, we will configure the interfaces manually.
 
@@ -234,9 +249,9 @@ Enter the Optional 2 interface name: `vtnet3`
 
 Do you want to proceed?: `y`
 
-Since the `WAN` interface of pfSense is managed by VirtualBox, it has been assigned an IPv4 address by the VirtualBox DHCP server. pfSense has also assigned an IPv4 address to the `LAN` interface using its own DHCP service. The `OPT1` and `OPT2` interfaces have not been assigned any IP address yet.. We do not want the IP addresses of the interfaces to change on boot. 
+Since the `WAN` interface of pfSense is managed by VirtualBox, it has been assigned an IPv4 address by the VirtualBox DHCP server. pfSense has also assigned an IPv4 address to the `LAN` interface using its own DHCP service. The `OPT1` and `OPT2` interfaces have not been assigned any IP address yet. We do not want the IP addresses of the interfaces to change on boot. 
 
-We will have to assign static IPv4 addresses to the `LAN`, `OPT1` and `OPT2` interfaces.
+- Next we will assign static IPv4 addresses to the `LAN`, `OPT1` and `OPT2` interfaces.
 
 {: .warning }
 The IP address of the `WAN` interface can be different in your case since it is assignment randomly by the VirtualBox DHCP server.
