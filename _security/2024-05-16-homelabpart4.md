@@ -12,11 +12,12 @@ nav_exclude: false
 ## Network & Security Home Lab: 
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
+###### Posted ***June 17, 2024***
 
 {: .text-center }
 ### <span style="color: orange; font-weight: bold;">Part 4 - pfSense Firewall configuration</span>
 
-###### Posted ***June 17, 2024***
+
 
 
 pfSense General Configuration

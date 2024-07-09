@@ -11,11 +11,12 @@ nav_exclude: false
 # Network & Security Home Lab: 
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
+###### Posted ***May 20, 2024***
 
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 1 - Introduction</span>
 
-###### Posted ***May 20, 2024***
+
 
 {: .warning }
 This series was inspired and follows a similar structure to David Varghese's [blog] guide.

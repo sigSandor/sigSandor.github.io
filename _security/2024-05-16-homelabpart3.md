@@ -11,11 +11,12 @@ nav_exclude: false
 # Network & Security Home Lab: 
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
+###### Posted ***June 16, 2024***
 
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Part 3 - Parrot Linux setup</span>
 
-###### Posted ***June 16, 2024***
+
 
 
 In this module, we are going to install Parrot OS. This VM will be used for ethical hacking.

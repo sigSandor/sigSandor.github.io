@@ -7,13 +7,16 @@ nav_order: 5
 nav_exclude: false
 ---
 
+{: .text-center }
 ## Network & Security Home Lab: 
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
-
-### <span style="color: pink; font-weight: bold;">Part 5 - Cyber Range setup</span>
-
 ###### in progress ***June 24, 2024***
+
+{: .text-center }
+### <span style="color: orange; font-weight: bold;">Part 5 - Cyber Range setup</span>
+
+
 
 
 ## <span style="color: royalblue; font-weight: bold;">VM 1: Metasploitable 2</span>

@@ -10,12 +10,12 @@ nav_exclude: true
 
 ## Network & Security Home Lab: 
 
-
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
-
-### <span style="color: pink; font-weight: bold;">Part 6 - Active Directory Setup</span>
-
 ###### Posted ***June, 2024***
+
+### <span style="color: orange; font-weight: bold;">Part 6 - Active Directory Setup</span>
+
+
 
 Building a Virtual Security Home Lab: Part 6 - Active Directory Lab Setup - Part 1
 
