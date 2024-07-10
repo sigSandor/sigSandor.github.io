@@ -43,7 +43,7 @@ However, I did my best to put my own spin on the home lab guide.
 {: .warning }
 You can check if Virtualization is enabled right now, by pressing *Shift>Control>Esc* to open ***Task Manager***. Under the Performance tab you can see if virtualization is enabled
 
-![taskm1](/assets/taskm1.png)
+![taskm](/assets/taskm.png)
 
 
 You should also already have [VC++] 2019 Redistributable installed as well.
