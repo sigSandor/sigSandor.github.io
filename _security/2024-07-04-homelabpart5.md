@@ -283,7 +283,7 @@ From a performance point of view Paravirtualized Network is the better choice. W
 
 In the next module, we will begin configuring the Active Directory Lab.
 
-### <span style="color: royalblue; font-weight: bold;">Part 6 - Active Directory Lab Setup - Part 1</span>
+### [Home Lab Part 6]({{site.baseurl}}/security/2024-07-04-homelabpart6/){: .btn .btn-green }
 
 
 [Chronos: 1 ~ VulnHub]: https://www.vulnhub.com/entry/chronos-1,735/

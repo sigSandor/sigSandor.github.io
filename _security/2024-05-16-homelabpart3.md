@@ -234,7 +234,8 @@ sudo apt autoremove
 
 In the next module, we will access the pfSense Web UI and complete the remaining configuration.
 
-<span style="color: royalblue; font-weight: bold;">Part 4 - pfSense Firewall Configuration</span>
+### [Home Lab Part 4]({{site.baseurl}}/security/2024-05-16-homelabpart4/){: .btn .btn-green }
+
 
 
 

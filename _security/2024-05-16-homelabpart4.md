@@ -462,3 +462,5 @@ Click on `Submit`.
 Once pfSense boots up you will be redirected to the login page.
 
 In the next module, we will add some vulnerable VMs to the `CYBER_RANGE` interface.
+
+### [Home Lab Part 5]({{site.baseurl}}/security/2024-07-04-homelabpart5/){: .btn .btn-green }

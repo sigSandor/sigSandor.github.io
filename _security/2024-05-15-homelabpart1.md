@@ -54,7 +54,8 @@ You can view a [Virtualization Guide] on this page.
 
 In the next module, we will start with the installation and configuration of pfSense.
 
-[Home Lab Part 2]({{site.baseurl}}/security/2024-05-16-homelabpart2/)
+
+### [Home Lab Part 2]({{site.baseurl}}/security/2024-05-16-homelabpart2/){: .btn .btn-green }
 
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 
