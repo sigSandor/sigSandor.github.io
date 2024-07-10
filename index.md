@@ -13,7 +13,7 @@ New (v1.8)
 
 ![new](/assets/new.jpg)
 
-# <span style="color: royalblue; font-weight: bold;"> Focusing on writing easy-to-read quality documentation</span>
+# <span style="color: royalblue; font-weight: bold;"> Focused on writing easy-to-read quality documentation</span>
 {: .fs-9 }
 
 {: .text-center }
@@ -28,6 +28,7 @@ Coming Soon!
 > Videos 
 > Cybersecurity malware analyis 
 > Security Tool guides
+> Networking Overview 
 ````
 
 {: .warning }
