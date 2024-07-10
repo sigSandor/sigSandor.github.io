@@ -4,7 +4,6 @@ title: "Network & Security Home Lab"
 categories: Security
 has_children: true
 nav_order: 1
-nav_exclude: false
 ---
 
 {: .text-center }
@@ -17,21 +16,23 @@ nav_exclude: false
 ## <span style="color: orange; font-weight: bold;">Part 1 - Introduction</span>
 
 
-
 {: .warning }
 This series was inspired and follows a similar structure to David Varghese's [blog] guide.
 However, I did my best to put my own spin on the home lab guide. 
+
+#<iframe width="420" height="315" src="//www.youtube.com/embed/w0K1wwSJZoc" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
 
 ----
 
 ## <span style="color: royalblue; font-weight: bold;">Item Overview</span>
 
 - PFsense (Firewall & Router)
-- Active Directory Lab
-- Security Virtual Machines (DFIR & SIEM)
+- Parrot linux
 - Cyber Control Range 
 - Malware Analysis Lab (Windows & Linux)
-- Parrot linux
+- Security Virtual Machines (DFIR & SIEM)
+- Active Directory Lab
+
 
 ##  <span style="color: royalblue; font-weight: bold;">Recommended Requirements</span> 
 - Windows 7 or 10 host OS
@@ -53,8 +54,7 @@ You can view a [Virtualization Guide] on this page.
 
 In the next module, we will start with the installation and configuration of pfSense.
 
-
-
+[Home Lab Part 2]({{site.baseurl}}/security/2024-05-16-homelabpart2/)
 
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
 
@@ -63,3 +63,4 @@ In the next module, we will start with the installation and configuration of pfS
 [VC++]: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 [blog]: https://blog.davidvarghese.dev/posts/building-home-lab-part-1/
+

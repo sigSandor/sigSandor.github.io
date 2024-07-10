@@ -8,7 +8,7 @@ nav_exclude: true
 ---
 
 {: .label .label-green }
-New (v1.4)
+New (v1.8)
 
 
 ![new](/assets/new.jpg)
@@ -17,12 +17,26 @@ New (v1.4)
 {: .fs-9 }
 
 
-Welcome to my website and cybersecurity blog. It's a valuable resource for myself, that provides a study of cybersecurity fundamentals, IT knowledge, CTF write ups (coming 2024), and much more. This website can be an awesome tool for anyone to reference, search, and have quick access to other resources. While I do have pride to write my own content, I pull inspiration and guidance from many resources, and my understanding is always changing. This means that this website is very much a living document, and also includes many external resourses/refrences and links to cheatsheets for those who prefer a more refined and defined experience. Please enjoy. -Alex
+Welcome to my website and cybersecurity blog.
+
+It's a valuable resource for myself, that provides a study of cybersecurity fundamentals, IT knowledge, and other personal items. This website can be an awesome tool for anyone to reference, search, and have quick access to  resources. I have pride in originality, however, I pull inspiration and guidance from many other people. I try my best to credit those individuals. (I try to avoid plagarism) Please enjoy. -Alex
+
+
+Coming Soon!
+{: .label .label-yellow }
+````scss
+> Videos 
+> Cybersecurity malware analyis 
+> Security Tool guides
+````
 
 {: .warning }
- Please allow up to *2-3 weeks for changes to apply on Github. 
+ Please allow up to *2-3 weeks* for changes and updates to apply.
+ Github Pages is a free hosting service, so patience is required.
 
  I would love to credit the 3 core components that keep this project free and functioning. Github/Github Pages, Jekyll website builder, and the original template is this repository is from `JustTheDocs`. 
+
+ Also a big shout out to the ***[Contributers]*** to JustTheDocs, for their documentation on the `Markdown` language, `Liquid`, and `HTMl`.
 
 
 [GitHub Pages][GitHub Pages]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -77,5 +91,5 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 [Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
 [GitHub Pages]: https://pages.github.com/
 [use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
-
+[Contributers]: https://just-the-docs.com/#contributing
 

@@ -405,5 +405,6 @@ In the next module, we will set up `Kali Linux` on the `LAN` interface. This VM 
 
 <span style="color: royalblue; font-weight: bold;">Next part - Kali Linux Setup</span>
 
+
 [Download]: https://www.pfsense.org/download/
 [Virtualbox Network Settings Guide]: https://www.nakivo.com/blog/virtualbox-network-setting-guide/
