@@ -78,7 +78,7 @@ Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 
 - Select Type as `BSD`, and Version as `FreeBSD (64-bit)` then click on `Next`.
 
-![vbox3](/assets/vbox3.png){: width="auto" height="auto" }
+![vbox3new](/assets/vbox3new.png){: width="auto" height="auto" }
 
 - On the next page, we can select the amount of RAM and CPU that the VM will use. As a baseline, You can choose 1024-2048 Base memory and 1-2 CPU cores. 
 
@@ -86,17 +86,17 @@ Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 > (No need for extraneous Memory or Enabling EFI in this case)
 
 
-![vbox4](/assets/vbox4.png){: width="auto" height="auto" }
+![vbox4new](/assets/vbox4new.png){: width="auto" height="auto" }
 
 - On the next page, we can choose the amount of storage space to reserve for the VM. (20GB will suffice.)
 
-![vbox5](/assets/vbox5.png){: width="auto" height="auto" }
+![vbox5new](/assets/vbox5new.png){: width="auto" height="auto" }
 
 ----
 
 ## <span style="color: royalblue; font-weight: bold;">Final Confirmation</span>
 
-![vbox6](/assets/vbox6.png){: width="auto" height="auto" }
+![vbox6new](/assets/vbox6new.png){: width="auto" height="auto" }
 - Confirm that everything looks right and then click on `Finish`.
 
 - Once done, we should see the newly created VM in the sidebar.
@@ -115,7 +115,7 @@ Right-click on the Group, and select `Rename Group`. Name the Group ***Firewall*
 
 The final result should match the following:
 
-![vbox7](/assets/vbox7.png){: width="auto" height="auto" }
+![vbox7new](/assets/vbox7new.png){: width="auto" height="auto" }
 
 ----
 
