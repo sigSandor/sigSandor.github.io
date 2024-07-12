@@ -11,7 +11,7 @@ nav_exclude: true
 ## Network & Security Home Lab: 
 
 ![banner](/assets/banner.jpg){: width="auto" height="auto" }
-###### Posted ***June, 2024***
+###### Posted ***, 2024***
 
 ### <span style="color: orange; font-weight: bold;">Part 6 - Active Directory Setup</span>
 
@@ -19,14 +19,6 @@ nav_exclude: true
 
 Building a Virtual Security Home Lab: Part 6 - Active Directory Lab Setup - Part 1
 
-A step-by-step guide for building your very own Cybersecurity Home Lab using VirtualBox
-Posted Jan 14, 2024
-Preview Image
-By David Varghese
-12 min read
-
-Banner Background by logturnal on Freepik
-Hacker Image by catalyststuff on Freepik
 
 For the Active Directory (AD) Lab we are going to configure three VMs. The first VM will be the Domain Controller (DC) of the environment. We will use Windows Server 2019 for this machine. The other two VMs will be the clients that use this environment. For the client VMs, we will use Windows 10 Enterprise.
 

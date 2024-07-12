@@ -19,7 +19,15 @@ callouts:
   warning:
     title: note
     color: green
-
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: red
+  note:
+    title: Note
+    color: purple
 
 #SEARCH PARAMATERS
 

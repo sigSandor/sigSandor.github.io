@@ -34,6 +34,7 @@ However, I did my best to put my own spin on the home lab guide.
 - Active Directory Lab
 
 
+
 ##  <span style="color: royalblue; font-weight: bold;">Recommended Requirements</span> 
 - Windows 7 or 10 host OS
 - 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support enabled
