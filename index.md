@@ -71,7 +71,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 ----
 
-<span style="color: royalblue; font-weight: bold;">Donations (monero):</span>
+<span style="color: royalblue; font-weight: bold;">Purchase me an energy drink (Monero):</span>
 46zGLPpMGNtZPk8VmWvuHDVWUbHyRB6CDCcY7WyiEQMRP1UZDrv9Crta27FZqtPqDABDoXHog15Ej77BhojNxbAu2xDzaee
 
 ![donations](/assets/donations.png)
