@@ -18,8 +18,6 @@ nav_exclude: false
 ### <span style="color: orange; font-weight: bold;">Part 4 - pfSense Firewall configuration</span>
 
 
-
-
 pfSense General Configuration
 Web Portal Setup
 
