@@ -318,6 +318,8 @@ Preferred DNS Server: `10.80.80.2`
 
 ![vbox163.png](/assets/vbox163.png){: width="auto" height="auto" }
 
+21:22
+
 Close the Network Connections page.
 
 In the Settings app click on the Home button (above search bar).
