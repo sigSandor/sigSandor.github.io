@@ -20,7 +20,6 @@ nav_order: 1
 This series was inspired and follows a similar structure to David Varghese's [blog] guide.
 However, I did my best to put my own spin on the home lab guide. 
 
-#<iframe width="420" height="315" src="//www.youtube.com/embed/w0K1wwSJZoc" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
 
 ----
 
