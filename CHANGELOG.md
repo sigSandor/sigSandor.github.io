@@ -20,6 +20,7 @@ All notable additions to this project are documented in this file.
 - add SQL server? 
 - embedded videos (#<iframe width="420" height="315" src="//www.youtube.com/embed/w0K1wwSJZoc" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
 )
+
 <details markdown="block">
 <summary> <span style="color: lightseagreen; font-weight: bold;">Home Lab Future plans</span> </summary>
 
@@ -48,7 +49,7 @@ All notable additions to this project are documented in this file.
 
 
 ## <span style="color: royalblue; font-weight: bold;">v0.1.9</span>
-- Addition of Changelog
+- Initial implementation of Changelog & Roadmap.
 - [JTD changelog]
 
 ## <span style="color: royalblue; font-weight: bold;">v0.1.8</span>
