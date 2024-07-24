@@ -18,7 +18,8 @@ All notable additions to this project are documented in this file.
 - Finish and rework part 6 (Active Directory)
 - Start Malware Analysis lab, Splunk setup, File transfer/malware analysis, video doc. 
 - add SQL server? 
-
+- embedded videos (#<iframe width="420" height="315" src="//www.youtube.com/embed/w0K1wwSJZoc" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
+)
 <details markdown="block">
 <summary> <span style="color: lightseagreen; font-weight: bold;">Home Lab Future plans</span> </summary>
 
@@ -32,8 +33,8 @@ All notable additions to this project are documented in this file.
 - Create OSI model graphical rework, 3-way TCP handshake graphicals, IPV4/IPV6 documentation/graphics
 
 - Revamp of Networking 101
- - add breakdown for VBox virtual adapters, Windows Network properties breakdown, pfSense walkthrough. 
- - order and organize folder
+- add breakdown for VBox virtual adapters, Windows Network properties breakdown, pfSense walkthrough. 
+- order and organize folder
 
 
 ### <span style="color: lightseagreen; font-weight: bold;">IOC/IOA (indicator of compromise/attack) documentation</span>{: .btn .btn-lightblue }
