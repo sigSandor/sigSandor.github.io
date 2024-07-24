@@ -17,9 +17,7 @@ nav_exclude: false
 ## <span style="color: orange; font-weight: bold;">Part 3 - Parrot Linux setup</span>
 
 
-
-
-In this module, we are going to install Parrot OS. This VM will be used for ethical hacking.
+In this module, we are going to install Parrot OS. This VM will be used for ethical hacking and management.
 
 We will use this VM in the next module also to complete the pfSense final setup.
 

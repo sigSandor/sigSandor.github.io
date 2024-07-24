@@ -4,12 +4,13 @@ title: Home
 nav_order: 1
 description: "Focusing on Documentation"
 nav_exclude: true
-
 ---
 
-{: .label .label-green }
-New (v1.8)
+{: .label .label-green } 
+New (v1.9)
 
+{: .label .label-blue } 
+Last updated 7/24/2024
 
 ![new](/assets/new.jpg)
 
