@@ -20,7 +20,7 @@ Last updated 7/24/2024
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Welcome to my website and cybersecurity blog.</span>
 
-It's a valuable resource for myself, that provides a study of cybersecurity fundamentals, IT knowledge, and other personal items. This website can be an awesome tool for anyone to reference, search, and have quick access to  resources. I have pride in originality, however, I pull inspiration and guidance from many other people. I try my best to credit those individuals. (I try to avoid plagarism) Please enjoy. -Alex
+This is a valuable resource free for anyone, that provides a insight and research into the cybersecurity field, IT fundamentals, and other personal items. This website can be an awesome tool for anyone to reference, search, and have quick access to learning material. I try to have pride in originality, however, I pull inspiration and guidance from many other people. I try my best to credit those individuals I learn from. Please enjoy. -Alex
 
 
 Coming Soon!
@@ -33,8 +33,9 @@ Coming Soon!
 ````
 
 {: .warning }
- Please allow up to *2-3 weeks* for changes and updates to apply.
- Github Pages is a free hosting service, so patience is required.
+Changes applied to GitHub pages take up to 24 hours, updates and additions can take 1 week or longer.
+
+----
 
  I would love to credit the 3 core components that keep this project free and functioning. Github>Github Pages, Jekyll website builder, and the original template is this repository from `JustTheDocs`. 
 
@@ -54,6 +55,17 @@ Coming Soon!
 [Bleeping computer]{: .btn .fs-5 .mb-4 .mb-md-0 }
 [Sans edu]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
+----
+
+<span style="color: royalblue; font-weight: bold;">Purchase me an energy drink (Monero):</span>
+46zGLPpMGNtZPk8VmWvuHDVWUbHyRB6CDCcY7WyiEQMRP1UZDrv9Crta27FZqtPqDABDoXHog15Ej77BhojNxbAu2xDzaee
+
+![donations](/assets/donations.png)
+
+Dont actually
+
+---
+
 <button class="btn btn-primary js-toggle-dark-mode">Toggle Darkmode (click twice to confirm)</button>
 
 <script>
@@ -69,16 +81,6 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
-
-----
-
-<span style="color: royalblue; font-weight: bold;">Purchase me an energy drink (Monero):</span>
-46zGLPpMGNtZPk8VmWvuHDVWUbHyRB6CDCcY7WyiEQMRP1UZDrv9Crta27FZqtPqDABDoXHog15Ej77BhojNxbAu2xDzaee
-
-![donations](/assets/donations.png)
-
----
-
 
 [Jekyll]: https://jekyllrb.com
 [Jekyll configuration]: https://jekyllrb.com/docs/configuration/

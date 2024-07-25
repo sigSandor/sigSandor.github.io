@@ -30,6 +30,11 @@ All notable additions to this project are documented in this file.
 
 </details>
 
+### <span style="color: lightseagreen; font-weight: bold;">Misc. tasklist</span>{: .btn .btn-lightblue }
+- Wipe exif data
+- organize
+
+
 ### <span style="color: lightseagreen; font-weight: bold;">Network Documentation</span>{: .btn .btn-lightblue }
 - Create OSI model graphical rework, 3-way TCP handshake graphicals, IPV4/IPV6 documentation/graphics
 
