@@ -20,7 +20,7 @@ Last updated 7/24/2024
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Welcome to my website and cybersecurity blog.</span>
 
-This is a valuable resource free for anyone, that provides a insight and research into the cybersecurity field, IT fundamentals, and other personal items. This website can be an awesome tool for anyone to reference, search, and have quick access to learning material. I try to have pride in originality, however, I pull inspiration and guidance from many other people. I try my best to credit those individuals I learn from. Please enjoy. -Alex
+This is a free resource for anyone, which provides a insight and research into the cybersecurity field, IT fundamentals, and other personal items. Its an opportunity for myself to practice technical writing and teaching. This website can be an awesome tool for anyone to reference, search, and have quick access to learning material. I try to have pride in originality, however, I pull inspiration and guidance from many other people. I try my best to credit those individuals I learn from. Please enjoy. -Alex
 
 
 Coming Soon!
