@@ -34,7 +34,7 @@ nav_exclude: false
 
 ## Firewalls
 
-- a Firewall is similar to a sifter used in baking. We want the fine particles of flour to be allowed into our dough, however we will stop big chunks and unwanted remnants from passing into the dough making by use of the sift filtering.
+- a Firewall is similar to a sifter used in baking. We want the fine particles of flour to be allowed into our dough, however we will stop big chunks and unwanted remnants from passing into the dough making by use of selective filtering.
 
 
 -Specifically, a well set up firewall will block all connections. It will only allow explicitly specified types of traffic to flow IN and OUT bound. 
@@ -48,7 +48,8 @@ nav_exclude: false
 - what do Firewall rules look like? 
 -Typically, firewall rules are very complicated. They require prior knowledge of the existing firewall rules. Common fields will include; Name, Description, Interface, Allow/Deny, Source IP/group, Destination IP/Group, Ports, and profiles. 
 
-PowerShell Ex: FirewallRule1 -DisplayName "Allow HTTPS" - Direction Inbound  -Protocol -TCP -LocalPort 80 -Action Allow
+PowerShell Ex:
+> FirewallRule1 -DisplayName "Allow HTTPS" - Direction Inbound  -Protocol -TCP -LocalPort 80 -Action Allow
 
 
 ### Why is seperating devices so important? 

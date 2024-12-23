@@ -32,9 +32,6 @@ Coming Soon!
 > Networking Overview 
 ````
 
-{: .warning }
-Changes applied to GitHub pages take up to 24 hours, updates and additions can take 1 week or longer.
-
 ----
 
  I would love to credit the 3 core components that keep this project free and functioning. Github>Github Pages, Jekyll website builder, and the original template is this repository from `JustTheDocs`. 
