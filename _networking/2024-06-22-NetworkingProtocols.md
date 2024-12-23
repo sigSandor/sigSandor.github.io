@@ -18,35 +18,37 @@ nav_exclude: false
 ###### In progress ***June 24, 2024***
 
 
-##  <span style="color: royalblue; font-weight: bold;">What do we mean by "Network"?</span>
+##  <span style="color: royalblue; font-weight: bold;">What is a "Network"?</span>
 
 
-- A `network` is a group of interconnected devices (all connected to the same Wi-Fi network) that exchange data and resources together. Most notably, they share an internet connection. This can be within complicated `VLAN` network, which is a *Virtual LAN within a LAN*, or a Network could be described as a home network with common household items such as **smartphones**, **laptops**, **printers**, **smart devices**, **TV's** and **other devices**.
+- A `network` is a group of interconnected devices (all on the same Wi-Fi network) that can exchange data and resources together. Most notably, they share an internet connection. A simple home network with common household items such as **smartphones**, **laptops**, **printers**, **smart devices**, **TV's** and **other devices** is considered a network.
 
 ## Common Network infrastructure devices
-- ISP modem
+- ISP modem: 
+ISP modem, allows access to the WorldWideWeb/Internet via DSL 
 
-- Router
+- Router:
+Distributes internet connections to devices through the Modem, then creates a local network (Wi-fi)
 
-- Access point
+- Access point:
+Extends a local network wirelessly. 
 
 - Switch
+Extends the amount of wired connections.
 
 ## Firewalls
 
-- a Firewall is similar to a sifter used in baking. We want the fine particles of flour to be allowed into our dough, however we will stop big chunks and unwanted remnants from passing into the dough making by use of selective filtering.
+- a Firewall allows or denies traffic based on the rules that are set up. Common fields will include; Name, Description, Interface, Allow/Deny, Source IP/group, Destination IP/Group, Ports, and profiles. 
 
 
--Specifically, a well set up firewall will block all connections. It will only allow explicitly specified types of traffic to flow IN and OUT bound. 
--An example of this could be a firewall allowing HTTPS and not HTTP. For security reasons, not allowing HTTP traffic outbound, could stop a phishing attack or credential harvesting.
-
-- Firewalls catch and filter certain data. Many types of firewalls are implemented. Here is a short list of some examples:
+- Many types of firewalls are implemented. Here is a short list of some examples:
 - a WAF (web application firewall), protects web-based applications
 - a Cloud Firewall, protects data transfer in cloud enviroments
 - multiple firewalls can be used in conjunction to more efficently route data, as well as having a layered network management. 
 
 - what do Firewall rules look like? 
--Typically, firewall rules are very complicated. They require prior knowledge of the existing firewall rules. Common fields will include; Name, Description, Interface, Allow/Deny, Source IP/group, Destination IP/Group, Ports, and profiles. 
+-Typically, firewall rules are very complicated. They require prior knowledge of the existing firewall rules. 
+
 
 PowerShell Ex:
 > FirewallRule1 -DisplayName "Allow HTTPS" - Direction Inbound  -Protocol -TCP -LocalPort 80 -Action Allow
