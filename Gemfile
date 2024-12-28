@@ -12,6 +12,6 @@ gem 'jekyll-seo-tag', '~> 2.8'
 
 gem 'rake', '~> 13.2', '>= 13.2.1'
 
-gem 'bundler', '~> 2.3.26', '>= 2.3.25'
+gem 'bundler', '~> 2.6.2', '>= 2.6.2'
 
 #rip
