@@ -75,7 +75,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.3.26, >= 2.3.25)
+  bundler (~> 2.6.2, >= 2.6.2)
   jekyll (~> 4.3.3)
   jekyll-include-cache (~> 0.2.1)
   jekyll-seo-tag (~> 2.8)
@@ -83,4 +83,4 @@ DEPENDENCIES
   rake (~> 13.2, >= 13.2.1)
 
 BUNDLED WITH
-   2.3.26
+   2.6.2
