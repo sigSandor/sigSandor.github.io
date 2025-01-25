@@ -17,12 +17,16 @@ nav_order: 3
 
 ###### IN PROGRESS ***June 18, 2024***
 
-- KQL is Cloud native, and designed to query large data sets.
+- KQL is designed to query large data sets, it is microsoft based & cloud native.
 
 - WORM language (Write Once Read Many)
 
-> These 3 links will allow you to access a test enviroment, and the video tutorial show you how to test the upcoming Query basics.
+For security purposes, KQL is often used for queries in sentinel to find logs. This can be via many different operators in the query. Simple queries may be based around longer time frames, such as 7-30 days worth of logs, or to drill down into host events, network events and more.
 
+- Another good resource is 'kqlsearch', which provides an assistant, generator and lab. 
+
+> These 3 links will allow you to access a test enviroment, and the video tutorial show you how to test the upcoming Query basics.
+- If you would like a more hands on example, try the links below;
 
 LAW
 ```scss
@@ -51,42 +55,6 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 > 
 
 > ![law1.png](/assets/law1.jpg){: width="auto" height="auto" }
-
-----
-
-# Most common uses for KQL
-
-
-## LAW (Log Analytic Workspace)
-
-- Purpose: Part of Azure Monitor, it is specifically focused on the collecting, analyzing, and querying of log and other telemetry data across Azure services, on-prem environments, cloud environments, and more. It's geared towards IT operational intelligence and monitoring, .
-
-- Query Language: Uses `Kusto Query Language` 
-
-- Data Types: Primarily focused on `logs` and `telemetry` data. logs are also referenced to as `records` in my website.
-
-- Use Cases: Ideal for infrastructure monitoring, application performance monitoring, security information and event management (SIEM), and compliance tracking.
-
-----
-
-## ADX (Azure Data Explorer)
-
-- Purpose: ADX is a big data analytics platform optimized for interactive queries on large volumes of data. It's designed to analyze, visualize, and explore data from various applications, websites, IoT devices, and more.
-
-- Query Language: Also uses `Kusto Query Language`
-
-- Data Types: While it can handle logs, it's also designed to work with a wider variety of data types, including metrics, time-series data, and telemetry from various sources. (think data analytics)
-
-- Performance: ADX is highly optimized for performance, being able to query millions if not billions of records in an instant.
-
-- Use Cases: Ideal for real-time analytics, IoT applications, telemetry data, customer and operational analytics, and scenarios requiring fast analysis of large datasets.
-
-
-
-[kql cheat sheet]{: .btn .fs-5 .mb-4 .mb-md-0 } 
-
-[kql cheat sheet (microsoft)]{: .btn .fs-5 .mb-4 .mb-md-0 } 
-
 
 ----
 
@@ -138,7 +106,7 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 - a good example can be `| where url contains 'share'`
 - capitalization doesnt matter.
 
-# Less common Syntax and Operators:
+# Other common Syntax and Operators:
 
 ### `has`
 
@@ -163,7 +131,6 @@ A `field` will run vertically, marked in <span style="color: royalblue; font-wei
 
 ### `UTC`
  
-
 
 [kql cheat sheet]: https://www.cyber.engineer/kql-cheat-sheet-the-basics/
 
