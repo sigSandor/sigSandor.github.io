@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "Photos"
+title: "Ho$pital"
 categories: Personal
 ---
 
 {: .text-center }
 ## <span style="color: orange; font-weight: bold;">Hospital experience</span>
 
+
+###### Places the tunnels told me to visit
 ![lighthouse](/assets/IMG_6723.jpeg){: width="auto" height="auto" }
 ![minersbeach](/assets/IMG_6730.jpeg){: width="auto" height="auto" }
-![bigbridgeDET](/assets/IMG_7075.jpeg){: width="auto" height="auto" }
-![hall lake](/assets/IMG_6760.jpeg){: width="auto" height="auto" }
+![bigbridgeDET](/assets/IMG_7057.jpeg){: width="auto" height="auto" }
+![hall lake](/assets/IMG_7058.jpeg){: width="auto" height="auto" }
 ![tahquamenonwata](/assets/IMG_7060.jpeg){: width="auto" height="auto" }
 ![hellaboats](/assets/IMG_7070.jpeg){: width="auto" height="auto" }
 ![lakesuperior](/assets/IMG_7072.jpeg){: width="auto" height="auto" }

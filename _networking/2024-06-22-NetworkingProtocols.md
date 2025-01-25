@@ -2,7 +2,6 @@
 layout: post
 title: "Networking 101" 
 categories: Networking
-has_children: true
 nav_order: 1
 nav_exclude: false
 ---
