@@ -42,3 +42,10 @@ nav_exclude: false
 
 ## Firewalls
 
+- Firewalls are a major part of network security, any application or user will have to be compliant to the firewall in order to reach outbound to the World Wide Web/Internet.
+
+- Standard abilities of a firewall will monitor and control network traffic.
+
+- Packet filtering for individual packets, stateful inspection of packets(Comparing previously passed packets), 
+
+- NGFW(Next Gen Firewalls) Provide 
