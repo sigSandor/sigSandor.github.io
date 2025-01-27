@@ -51,7 +51,10 @@ All notable additions to this project are documented in this file.
 
 </details>
 
-
+## <span style="color: royalblue; font-weight: bold;">v0.1.9.1</span>
+- Updating wording and flow of existing files
+- Network Documentation started
+- Planning for At home IR resources
 
 ## <span style="color: royalblue; font-weight: bold;">v0.1.9</span>
 - Initial implementation of Changelog & Roadmap.

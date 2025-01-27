@@ -7,10 +7,10 @@ nav_exclude: true
 ---
 
 {: .label .label-green } 
-New (v1.9)
+New (v1.9.1)
 
 {: .label .label-blue } 
-Last updated 7/24/2024
+Last updated 12/23/2024
 
 ![new](/assets/new.jpg)
 
@@ -31,9 +31,6 @@ Coming Soon!
 > Security Tool guides
 > Networking Overview 
 ````
-
-{: .warning }
-Changes applied to GitHub pages take up to 24 hours, updates and additions can take 1 week or longer.
 
 ----
 
