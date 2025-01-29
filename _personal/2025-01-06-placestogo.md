@@ -2,6 +2,7 @@
 layout: post
 title: "Ho$pital"
 categories: Personal
+parent: Photo collection
 ---
 
 {: .text-center }

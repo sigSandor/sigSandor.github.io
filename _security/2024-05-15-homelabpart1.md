@@ -35,14 +35,14 @@ However, I did my best to put my own spin on the home lab guide.
 
 
 ##  <span style="color: royalblue; font-weight: bold;">Recommended Requirements</span> 
-- Windows 7 or 10 host OS
+- Windows 7 or 10 host OS (standalone from home and business os)
 - 64-bit multi-threaded CPU (minimum 4 cores) with Virtualization Support enabled
 - 16GB RAM
 - 500gb - 1TB Free disk space
 
 
 {: .warning }
-You can check if Virtualization is enabled right now, by pressing *Shift>Control>Esc* to open ***Task Manager***. Under the Performance tab you can see if virtualization is enabled
+You should check if virtualization is enabled right now, by pressing *Shift>Control>Esc* to open ***Task Manager***. Under the Performance tab you can see if virtualization is enabled
 
 ![taskm](/assets/taskm.png)
 

@@ -20,14 +20,14 @@ nav_exclude: false
 
 
 
-In this portion, we will go over the basic installation of `pfSense` as a virtual machine. Later on, we will also complete the system configuration, network interfaces, and then configure the router for the lab.
+In this portion, we will go over the basic installation of `pfSense` router as a vm. Later on, we will also complete the system configuration, network interfaces, and then configure the router for the lab.
 
 ----
 
 {: .warning }
-pfSense is going to be the default gateway for our home lab. 
+pfSense is going to be the default gateway for our home lab as well. 
 This means that pfSense will have to be the first VM that is booted. 
-Any VM's launched before pfSense will have connectivity issues.
+Any VM's launched before pfSense will have network connectivity issues.
 
 ## <span style="color: royalblue; font-weight: bold;">Downloading pfSense</span>
 
@@ -37,8 +37,8 @@ Go to: `pfSense Community Edition` > [Download]
 
 As of May 22, 2024 the latest version of pfSense is `2.7.2`.
 
-You will have to create an account with NetGate, which I wont be covering.
-Account setup is free, and once registered navigate to the download portal.
+`You will have to create an account with NetGate, which I wont be covering.
+Account setup is free, and once registered navigate to the download portal.`
 
 ![vbox18.png](/assets/vbox18.png){: width="auto" height="auto" }
 
@@ -72,7 +72,7 @@ Here, I created a folder in `Documents>Virtual Machine Folder` that I will be us
 Launch VirtualBox. Click on `Tools` from the sidebar and then ***New***.
 
 
-- For name selection, PfSense Firewall/Router works. 
+- For name selection, "PfSense Firewall/Router" works. 
 
 - From the ISO Image dropdown select *Others* in order to select the `.iso` file that we just extracted. 
 
