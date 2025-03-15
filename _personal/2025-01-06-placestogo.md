@@ -21,7 +21,7 @@ nav_exclude: false
 ![lakesuperior](/assets/IMG_7072.jpeg){: width="auto" height="auto" }
 ![soho](/assets/IMG_7074.jpeg){: width="auto" height="auto" }
 ![placetheywanttoputacarwash](/assets/IMG_6724.jpeg){: width="auto" height="auto" }
-![scoping](/assets/IMG_6927.jpeg){: width="auto" height="auto" }
+![scoping](/assets/1IMG_6927.jpeg){: width="auto" height="auto" }
 ![thebowlingalley](/assets/IMG_6930.jpeg){: width="auto" height="auto" }
 ![sleepingbear](/assets/IMG_7054.jpeg){: width="auto" height="auto" }
 ![icecave](/assets/IMG_7065.jpeg){: width="auto" height="auto" }
