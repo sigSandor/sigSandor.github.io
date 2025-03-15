@@ -3,6 +3,8 @@ layout: post
 title: "Ho$pital"
 categories: Personal
 parent: Photo collection
+nav_order: 2
+nav_exclude: false
 ---
 
 {: .text-center }

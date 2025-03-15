@@ -2,6 +2,7 @@
 layout: post
 title: "Photo collection"
 categories: Personal
+has_children: true
 ---
 
 {: .text-center }
